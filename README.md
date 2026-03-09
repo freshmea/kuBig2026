@@ -19,6 +19,9 @@
 - vscode remote wsl2 연결하고 git clone 하기
 - hello world c 프로그램 작성하기
 - literal 프로그램 작성 - int d, char c, char* s, octal o, hex h, float f, double lf, long double ldf, long long ll, unsigned int u, unsigned long long llu, pointer p, string s
+- limit 프로그램 작성 - int, char, float, double, long double, long long, unsigned int, unsigned long long
+- 과제 : [마크다운 정리UTUBE](https://www.youtube.com/watch?v=kMEb_BzyUqk) [마크다운 블로그](https://www.heropy.dev/p/B74sNE)
+- 과제 : mermaid 로 그래프 그리기 해보기
 
 ```text
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart

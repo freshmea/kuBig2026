@@ -1,3 +1,5 @@
+// cc -o limit limit.c
+
 #include <limits.h>
 #include <stdio.h>
 
