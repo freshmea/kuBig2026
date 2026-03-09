@@ -16,6 +16,8 @@
 - wsl 설치
 - vscode, git 설치
 - OS 설명 ( 리눅스, wsl2 사용하기로 함)
+- vscode remote wsl2 연결하고 git clone 하기
+- hello world c 프로그램 작성하기
 
 ```text
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
