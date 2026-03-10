@@ -47,5 +47,6 @@ git config --global user.name freshmea
 - 2교시: make 사용법, stringCopy,
 - 3교시: 산술 연산자, 관계 연산자, 논리연산자, C 언어에서의 true 와 false, stdbool 사용법
 - 4교시: oddEven triangle triangle2 compare compare2 작성
-- 5교시: 증감연산자, 타입 캐스팅, sizeof 연산자, 복합 대입 연산자
-- 6교시: 비트 연산자.
+- 5교시: 타입 캐스팅 fahr2Celcius, sizeof 연산자
+- 6교시: 증감연산자 increment, 음수의 표현, 폰 노이만의 바이트머신
+- 7교시: 복합 대입 연산자
