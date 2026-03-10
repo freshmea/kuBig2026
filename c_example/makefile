@@ -1,7 +1,7 @@
-TARGET = hello
+SRCS = ${wildcard *.c}
+TARGET = ${SRCS:.c=}
 
-${TARGET} : ${TARGET}.c
-	cc -o ${TARGET} ${TARGET}.c
+all: ${TARGET}
 
 clean :
 	rm ${TARGET}
