@@ -6,6 +6,20 @@
 
 [교육생 슬라이드](https://docs.google.com/presentation/d/1igQGshYUiAKx2f91brdvskaBBEhlvog_YM9Dt9nse1I/edit?usp=sharing)
 
+```text
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+wsl --install -d Ubuntu-22.04
+wsl --set-default-version 2
+wsl --set-version Ubuntu-22.04 2
+wsl -l -v
+
+- 터미널에서 유저 정보 입력
+git config --global user.email freshmea@gmail.com
+git config --global user.name freshmea
+```
+
 ---
 
 ## 2026-03-09
@@ -23,20 +37,6 @@
 - 과제 : [마크다운 정리UTUBE](https://www.youtube.com/watch?v=kMEb_BzyUqk) [마크다운 블로그](https://www.heropy.dev/p/B74sNE)
 - 과제 : mermaid 로 그래프 그리기 해보기
 
-```text
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-
-wsl --install -d Ubuntu-22.04
-wsl --set-default-version 2
-wsl --set-version Ubuntu-22.04 2
-wsl -l -v
-
-- 터미널에서 유저 정보 입력
-git config --global user.email freshmea@gmail.com
-git config --global user.name freshmea
-```
-
 ---
 
 ## 2026-3-10
@@ -49,4 +49,6 @@ git config --global user.name freshmea
 - 4교시: oddEven triangle triangle2 compare compare2 작성
 - 5교시: 타입 캐스팅 fahr2Celcius, sizeof 연산자
 - 6교시: 증감연산자 increment, 음수의 표현, 폰 노이만의 바이트머신
-- 7교시: 복합 대입 연산자
+- 7교시: 비트연산, fourbit, fourbit2, genderRatio
+- 8교시: 대소문자 구분, 알파벳 구분
+- 과제 : [make 문법](https://code-lab1.tistory.com/370), [vscode 단축키](https://inpa.tistory.com/entry/VS-Code-%E2%8F%B1%EF%B8%8F-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%A0%95%EB%A6%AC)
