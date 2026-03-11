@@ -7,7 +7,7 @@
 int main(void)
 {
     int nums[MAXINDEX];
-    srand(time(NULL));
+    srand(time(NULL)); //seed!
     for (int i = 0; i < MAXINDEX; ++i){
         nums[i] = rand() % 1000;
         printf("%d ", nums[i]);

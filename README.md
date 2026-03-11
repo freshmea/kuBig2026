@@ -62,10 +62,9 @@ git config --global user.name freshmea
 - 1교시: 흐름제어 - 조건문
 - 2교시: if ~ else 문, switch 문(passFail, passFail2, posZeroNeg, scoreGrade, scoreGradeSwitch), random(dice)
 - 3교시: for 문(one2Ten, one2TenSum, a2bSum)
-- 4교시: oddEven triangle triangle2 compare compare2 작성
-- 5교시: 타입 캐스팅 fahr2Celcius, sizeof 연산자
-- 6교시: 증감연산자 increment, 음수의 표현, 폰 노이만의 바이트머신
-- 7교시: 비트연산, fourbit, fourbit2, genderRatio
-- 8교시: 대소문자 구분, 알파벳 구분
-- 과제 :
-
+- 4교시: while 문 do~ while 문
+- 5교시: 구구단, star 예제
+- 6교시: 배열 - 배열의 선언과 초기화, 배열의 인덱스, 배열과 포인터, 2차원 배열
+- 7교시: 배열 연습 , lotto, dice2
+- 8교시: 배열 연습 , sumArray, findmax, sumMatrix
+- 과제 : 없음
