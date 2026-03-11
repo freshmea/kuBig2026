@@ -60,11 +60,12 @@ git config --global user.name freshmea
 ---
 
 - 1교시: 흐름제어 - 조건문
-- 2교시: make 사용법, stringCopy,
-- 3교시: 산술 연산자, 관계 연산자, 논리연산자, C 언어에서의 true 와 false, stdbool 사용법
+- 2교시: if ~ else 문, switch 문(passFail, passFail2, posZeroNeg, scoreGrade, scoreGradeSwitch), random(dice)
+- 3교시: for 문(one2Ten, one2TenSum, a2bSum)
 - 4교시: oddEven triangle triangle2 compare compare2 작성
 - 5교시: 타입 캐스팅 fahr2Celcius, sizeof 연산자
 - 6교시: 증감연산자 increment, 음수의 표현, 폰 노이만의 바이트머신
 - 7교시: 비트연산, fourbit, fourbit2, genderRatio
 - 8교시: 대소문자 구분, 알파벳 구분
-- 과제 : [make 문법](https://code-lab1.tistory.com/370), [vscode 단축키](https://inpa.tistory.com/entry/VS-Code-%E2%8F%B1%EF%B8%8F-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%A0%95%EB%A6%AC)
+- 과제 :
+

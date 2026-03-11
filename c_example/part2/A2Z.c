@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void)
+{
+    char i = 'A';
+    // int i = 'A'
+    while(i <= 'Z')
+    {
+        printf("%c ", i);
+        ++i;
+    }
+    printf("\n");
+    return 0;
+}
