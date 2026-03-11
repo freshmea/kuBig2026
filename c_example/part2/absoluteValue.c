@@ -6,10 +6,10 @@ int main(void)
     printf("숫자를 넣으세요 :");
     scanf("%d", &num);
 
-    if (num < 0){
-        num = -num;
-    }
+    // if (num < 0){
+    //     num = -num;
+    // }
 
-    printf("절대값은 : %d\n", num);
+    printf("절대값은 : %d\n", num < 0 ? -num : num );
     return 0;
 }
