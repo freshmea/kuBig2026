@@ -68,3 +68,19 @@ git config --global user.name freshmea
 - 7교시: 배열 연습 , lotto, dice2
 - 8교시: 배열 연습 , sumArray, findmax, sumMatrix
 - 과제 : 없음
+
+---
+
+## 2026-3-12
+
+---
+
+- 1교시: swap, 함수 설명, add 함수 작성
+- 2교시: swap 을 함수로 작성, 정렬 - 선택정렬
+- 3교시: 정렬 - 버블 정렬, qsort
+- 4교시:
+- 5교시:
+- 6교시:
+- 7교시:
+- 8교시:
+- 과제 : 없음
