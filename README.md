@@ -82,5 +82,5 @@ git config --global user.name freshmea
 - 5교시: 리틀 엔디안 빅 엔디안
 - 6교시: 함수 포인터
 - 7교시: void 포인터
-- 8교시: 포인터와 배열
+- 8교시: 포인터와 배열, 함수로 배열 넘기기 arraycompare
 - 과제 : 없음
