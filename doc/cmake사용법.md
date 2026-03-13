@@ -13,6 +13,8 @@ make
 
 - makefile 사용법
   - 우선 소스를 오브젝트로 만든다.
+  - 그리고 오브젝트를 링크해서 실행파일을 만든다.
+  - 명령어가 작동 되면 makefile로 만든다.
 
 ```shell
 cc -c main.c
@@ -22,14 +24,14 @@ cc -o carSerial main.o serial.o
 
 ```text
 carSerial : main.o serial.o
-	cc -o carSerial main.o serial.o
+    cc -o carSerial main.o serial.o
 
 main.o : main.c serial.h
-	cc -c main.c
+    cc -c main.c
 
 serial.o : serial.c serial.h
-	cc -c serial.c
+    cc -c serial.c
 
 clean :
-	rm main.o serial.o carSerial
+    rm main.o serial.o carSerial
 ```

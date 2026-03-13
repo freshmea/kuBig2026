@@ -84,3 +84,19 @@ git config --global user.name freshmea
 - 7교시: void 포인터
 - 8교시: 포인터와 배열, 함수로 배열 넘기기 arraycompare
 - 과제 : 없음
+
+---
+
+## 2026-3-13
+
+---
+
+- 1교시: cmake 설명, cmake 로 빌드 하는 방법
+- 2교시: carSerial 예제, 분할 컴파일 연습
+- 3교시: cmake VsCode 설정, 디버깅 설정(gdb)
+- 4교시: cc -c , cc -o 활용해서 링킹 빌드, makefile 작성
+- 5교시: myRandom 예제 - static 변수, extern 키워드 사용법
+- 6교시: baseball 게임 만들기 - 게임 설명, main 함수 작성
+- 7교시: baseball 게임 만들기 - 실습
+- 8교시: baseball 게임 만들기 - 실습
+- 과제 : [cmake 사용법](https://nx006.tistory.com/36), [cmake 할때 쪼오오금 도움이 되는 문서](https://gist.github.com/luncliff/6e2d4eb7ca29a0afd5b592f72b80cb5c?permalink_comment_id=3300758)
