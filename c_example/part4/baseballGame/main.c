@@ -55,7 +55,7 @@ void input_numbers(int* answer)
 {
     printf("숫자를 %d개 넣으세요: ", SIZE);
     for (int i = 0; i < SIZE;++i){
-        scanf("%d", answer[i]);
+        scanf("%d", &answer[i]);
     }
 }
 
