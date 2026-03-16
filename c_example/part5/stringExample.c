@@ -17,10 +17,15 @@ int main(void){
         printf("C%d: %c\n", i, str2[i]);
     }
 
+    str2[10] = 'A';
     // strcmp 함수
-    if(strcmp(str2, str) == 0 ){
+    printf("%d", strcmp(str2, str));
+    if (strcmp(str2, str) == 0)
+    {
         printf("str 과 str2 는 같다.\n");
-    } else {
+    }
+    else
+    {
         printf("str 과 str2 는 다르다.\n");
     }
 
