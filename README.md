@@ -100,3 +100,19 @@ git config --global user.name freshmea
 - 7교시: baseball 게임 만들기 - 실습
 - 8교시: baseball 게임 만들기 - 실습
 - 과제 : [cmake 사용법](https://nx006.tistory.com/36), [cmake 할때 쪼오오금 도움이 되는 문서](https://gist.github.com/luncliff/6e2d4eb7ca29a0afd5b592f72b80cb5c?permalink_comment_id=3300758)
+
+---
+
+## 2026-3-16
+
+---
+
+- 1교시: 복습, 구조체
+- 2교시: 구조체 선언, 초기화, typedef
+- 3교시: date 구조체 예제
+- 4교시: twoDouble 구조체 예제
+- 5교시:
+- 6교시:
+- 7교시:
+- 8교시:
+- 과제 :
