@@ -128,7 +128,7 @@ git config --global user.name freshmea
 - 3교시: 표준 입출력 함수 정리
 - 4교시: 파일 입출력, file descriptor, file pointer 예제
 - 5교시: 동적할당 malloc, free 예제
-- 6교시:
+- 6교시: 기타 동적할당 함수 - calloc, realloc
 - 7교시:
 - 8교시:
 - 과제 : 없음
