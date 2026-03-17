@@ -129,6 +129,6 @@ git config --global user.name freshmea
 - 4교시: 파일 입출력, file descriptor, file pointer 예제
 - 5교시: 동적할당 malloc, free 예제
 - 6교시: 기타 동적할당 함수 - calloc, realloc
-- 7교시:
-- 8교시:
-- 과제 : 없음
+- 7교시: scoreProcess 예제 설명
+- 8교시: scoreProcess 예제 실습
+- 과제 : scoreProcess 의 데이터 수를 파일 읽을 때 얻어와서 자동으로 실행하게 만들기
