@@ -15,29 +15,13 @@
 // HongJinHo             45  32  55 132  44.00 10
 // -----------------------------------------------
 // **table 포인터를 쓰지 않으려면 쓰지 않고 결과만 만들어도 됨
-
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct {
-    char name[20];
-    int kor;
-    int eng;
-    int mat;
-    int sum;
-    double average;
-    int rank;
-} Sdata;
-
-void inputData(FILE *fp, Sdata *s, int n);
-void calculateScore(Sdata *s, int n);
-void calculateRank(Sdata *s, int n);
-void sortPointers(Sdata *s, Sdata **table, int n);
-void printResult(FILE *fp, Sdata **table, int n);
+#include "scoreProcess.h"
 
 int main(void){
-    FILE *fin = fopen("score.dat", "r");
-    FILE *fout = fopen("score.out", "w");
+    char *finPath = "/home/aa/kuBig2026/c_example/part6/scoreProcess/score.dat";
+    char *foutPath = "/home/aa/kuBig2026/c_example/part6/scoreProcess/score.out";
+    FILE *fin = fopen(finPath, "r");
+    FILE *fout = fopen(foutPath, "w");
     int n;
     printf("처리할 학생의 수를 입력하세요: ");
     if (scanf("%d", &n) != 1)
@@ -68,53 +52,4 @@ int main(void){
     fclose(fin);
     fclose(fout);
     return 0;
-}
-
-void inputData(FILE *fp, Sdata *s, int n)
-{
-    for (int i = 0; i < n;++i){
-        fscanf(fp, "%s %d %d %d", s[i].name, &s[i].kor, &s[i].eng, &s[i].mat);
-    }
-}
-void calculateScore(Sdata *s, int n)
-{
-    for (int i = 0; i < n;++i){
-        s[i].sum = s[i].kor + s[i].eng + s[i].mat;
-        s[i].average = (double)s[i].sum / 3.0;
-        s[i].rank = 1;
-    }
-}
-void calculateRank(Sdata *s, int n)
-{
-    for (int i = 0; i < n;++i){
-        for (int j = 0; j < n;++j){
-            if (s[i].sum <s[j].sum)
-                s[i].rank++;
-        }
-    }
-}
-void sortPointers(Sdata *s, Sdata **table, int n)
-{
-    for (int i = 0; i < n;++i)
-        table[i] = &s[i];
-    for (int i = 0; i < n;++i){
-        for (int j = 0; j < n;++j){
-            if (table[i]->sum > table[j]->sum){
-                Sdata *tmp = table[i];
-                table[i] = table[j];
-                table[j] = tmp;
-            }
-        }
-    }
-
-}
-void printResult(FILE *fp, Sdata **table, int n)
-{
-    fprintf(fp, "-----------------------------------------------\n");
-    fprintf(fp, "                  Test Result\n");
-    fprintf(fp, "-----------------------------------------------\n");
-    for (int i = 0; i < n;++i){
-        fprintf(fp, "%-20s %3d %3d %3d %3d %6.2f %2d\n", table[i]->name, table[i]->kor, table[i]->eng, table[i]->mat, table[i]->sum, table[i]->average, table[i]->rank);
-    }
-    fprintf(fp, "-----------------------------------------------\n");
 }
