@@ -111,8 +111,8 @@ git config --global user.name freshmea
 - 2교시: 구조체 선언, 초기화, typedef
 - 3교시: date 구조체 예제
 - 4교시: twoDouble 구조체 예제
-- 5교시:
-- 6교시:
-- 7교시:
-- 8교시:
-- 과제 :
+- 5교시: 구조체 배열 예제 structArray, selfReference(linked List)
+- 6교시: union 설명, union 예제, enum 설명, enum 예제
+- 7교시: string.h 라이브러리 함수 설명(strlen, strcpy, strncpy, strcat, strcmp)
+- 8교시: 표준입출력함수(getchar, putchar, gets, puts, scanf, printf)과 파일 입출력 함수(getc, putc, fgets, fputs, fscanf, fprintf) 정리
+- 과제 : 없음
