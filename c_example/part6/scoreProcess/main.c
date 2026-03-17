@@ -40,11 +40,11 @@ int main(void){
         return 1;
     }
 
-    inputData(fin, students, 10);
-    calculateScore(students, 10);
-    calculateRank(students, 10);
-    sortPointers(students, table, 10);
-    printResult(fout, table, 10);
+    inputData(fin, students, n);
+    calculateScore(students, n);
+    calculateRank(students, n);
+    sortPointers(students, table, n);
+    printResult(fout, table, n);
 
     free(table);
     free(students);
