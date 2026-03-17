@@ -127,7 +127,7 @@ git config --global user.name freshmea
 - 2교시: 표준입출력함수(getchar, putchar, gets, puts, scanf, printf)과 파일 입출력 함수(getc, putc, fgets, fputs, fscanf, fprintf) 정리
 - 3교시: 표준 입출력 함수 정리
 - 4교시: 파일 입출력, file descriptor, file pointer 예제
-- 5교시:
+- 5교시: 동적할당 malloc, free 예제
 - 6교시:
 - 7교시:
 - 8교시:
