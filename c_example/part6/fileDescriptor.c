@@ -5,7 +5,7 @@
 int main(void)
 {
     int fd;
-    char *path = "/home/aa/kuBig2026/c_example/part6";
+    char *path = "/home/aa/kuBig2026/c_example/part6"; // 본인 경로
     char fPath[100];
     sprintf(fPath, "%s%s", path, "/test.dat");
     fd = open(fPath, O_WRONLY | O_CREAT | O_TRUNC, 0644);
