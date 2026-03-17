@@ -10,7 +10,7 @@ int main(void)
     ch = getchar(); // fgetc 하고 동일한데 stdin 을 안써도 된다
     printf("%d, %d, %d", stdin->_fileno, stdout->_fileno, stderr->_fileno);
     printf("입력한 문자는 %c 입니다.\n", ch);
-    while(getchar() != '\n')
+    while(getchar() != '\n' && getchar() != EOF)
         ;
     ch = fgetc(stdin);
     printf("입력한 문자는 %c입니다.\n", ch);
