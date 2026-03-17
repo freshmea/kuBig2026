@@ -116,3 +116,19 @@ git config --global user.name freshmea
 - 7교시: string.h 라이브러리 함수 설명(strlen, strcpy, strncpy, strcat, strcmp)
 - 8교시: 표준입출력함수(getchar, putchar, gets, puts, scanf, printf)과 파일 입출력 함수(getc, putc, fgets, fputs, fscanf, fprintf) 정리
 - 과제 : 없음
+
+---
+
+## 2026-3-17
+
+---
+
+- 1교시: 복습, 구조체
+- 2교시: 표준입출력함수(getchar, putchar, gets, puts, scanf, printf)과 파일 입출력 함수(getc, putc, fgets, fputs, fscanf, fprintf) 정리
+- 3교시: 표준 입출력 함수 정리
+- 4교시: 파일 입출력, file descriptor, file pointer 예제
+- 5교시:
+- 6교시:
+- 7교시:
+- 8교시:
+- 과제 : 없음
