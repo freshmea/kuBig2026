@@ -19,12 +19,12 @@ int main(void)
     push(&s2, 800);
     push(&s2, 900);
 
-    printf("s2 첫 pop() 리턴 값: %d\n", pop(&s2));     // 700
+    printf("s2 첫 pop() 리턴 값: %d\n", pop(&s2));     // 900
     printf("s2 두번째 pop() 리턴 값: %d\n", pop(&s2)); // 800
-    printf("s2 세번째 pop() 리턴 값: %d\n", pop(&s2)); // 900
+    printf("s2 세번째 pop() 리턴 값: %d\n", pop(&s2)); // 700
 
-    printf("s1 스택 메모리 사이즈는 : %d", s1.size);
-    printf("s2 스택 메모리 사이즈는 : %d", s2.size);
+    printf("s1 스택 메모리 사이즈는 : %d\n", s1.size);
+    printf("s2 스택 메모리 사이즈는 : %d\n", s2.size);
     cleanupStack(&s1);
     cleanupStack(&s2);
     return 0;
