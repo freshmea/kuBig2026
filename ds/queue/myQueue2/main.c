@@ -24,7 +24,7 @@ int main(void)
     printf("세번째 pop(): %d\n", pop(&qu2)); // 900
 
     // max index 를 넘어 갔을 때 101 개채울 때 에러
-    for (int i = 0; i < 101;++i){
+    for (int i = 0; i < 99;++i){
         push(&qu2, i);
         printf("%d , \n", i);
     }
