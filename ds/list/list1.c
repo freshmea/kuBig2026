@@ -79,9 +79,9 @@ void deleteNode(Node *p, int data)
         prev = curr;
         curr = curr->next;
     }
-    if (curr ==NULL)
+    if (curr == NULL)
         return;
-    if(prev == NULL){
+    if (prev == NULL){
         p = curr->next;
     }else{
         prev->next = curr->next;
