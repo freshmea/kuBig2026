@@ -132,3 +132,19 @@ git config --global user.name freshmea
 - 7교시: scoreProcess 예제 설명
 - 8교시: scoreProcess 예제 실습
 - 과제 : scoreProcess 의 데이터 수를 파일 읽을 때 얻어와서 자동으로 실행하게 만들기
+
+---
+
+## 2026-3-18
+
+---
+
+- 1교시: 복습, 과제 풀이
+- 2교시: 데이터구조 DataStructure 설명
+- 3교시: 스택 설명, 스택 예제mystack1 - 전역 변수 제거, 구조체 사용mystack2
+- 4교시: 큐 설명, 큐 예제myqeue1 - 전역 변수 제거, 구조체 사용
+- 5교시:
+- 6교시:
+- 7교시:
+- 8교시:
+- 과제 :
