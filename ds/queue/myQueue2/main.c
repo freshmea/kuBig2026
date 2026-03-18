@@ -26,7 +26,7 @@ int main(void)
     // max index 를 넘어 갔을 때 101 개채울 때 에러
     for (int i = 0; i < 101;++i){
         push(&qu2, i);
-        printf("%d , ", i);
+        printf("%d , \n", i);
     }
     // 데이터가 부족할때
     for (int i = 0; i < 101; ++i)

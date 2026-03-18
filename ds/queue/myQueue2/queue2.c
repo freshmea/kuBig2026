@@ -10,7 +10,7 @@ void push(Qu *pQu, int data)
     if(pQu->rear == pQu->queue + ARRAYSIZE){
         pQu->rear = pQu->queue;
     }
-    if(pQu->rear++ == pQu->front){
+    if(pQu->rear + 1 == pQu->front){
         fprintf(stderr, "stack is full\n");
         exit(1);
     }
