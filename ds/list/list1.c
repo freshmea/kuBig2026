@@ -35,7 +35,7 @@ int main(void)
     // insertNode(3, p->next->next);
 
     // 삭제 코드
-    deleteNode(p, 300);
+    deleteNode(p, 30);
 
     // 출력 코드
     Node *tmp;
@@ -45,9 +45,8 @@ int main(void)
         tmp = tmp->next;
     }
 
-    // list 를 제거 하는 코드
+    // heap 에서 list 를 전체를 free
     deleteList(p);
-    free(p);
     return 0;
 }
 
@@ -61,20 +60,14 @@ void insertNode(int data, Node *p)
 
 void deleteList(Node *p)
 {
-    Node *tmp = malloc(sizeof(Node));
-    Node *tmp2 = malloc(sizeof(Node));
-    tmp = p->next;
-    for (int i = 0; i < 1;++i){
-        tmp = tmp->next;
-    }
-    tmp2 = p->next;
-    for (int i = 0; i < 2; ++i)
+    Node *curr = p;
+    Node *tmp2;
+    while (curr != NULL)
     {
-        tmp2 = tmp2->next;
+        tmp2 = curr->next;
+        free(curr);
+        curr = tmp2;
     }
-    tmp2 = tmp->next;
-    free(tmp);
-    free(tmp2);
 }
 
 void deleteNode(Node *p, int data)
