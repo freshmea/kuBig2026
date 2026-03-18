@@ -22,10 +22,8 @@ int main(void){
     char *foutPath = "/home/aa/kuBig2026/c_example/part6/scoreProcess/score.out";
     FILE *fin = fopen(finPath, "r");
     FILE *fout = fopen(foutPath, "w");
-    int n;
-    printf("처리할 학생의 수를 입력하세요: ");
-    if (scanf("%d", &n) != 1)
-        return 1;
+
+    int n = count_students(fin);
 
     if (fin == NULL || fout == NULL){
         fprintf(stderr, "파일을 열수 없습니다.\n");
