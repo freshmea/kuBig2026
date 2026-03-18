@@ -30,12 +30,12 @@ int main(void)
     // ...
 
     // 삽입 코드
-    // insertNode(3, p);
-    // insertNode(3, p->next);
+    insertNode(30, p);
+    insertNode(40, p->next);
     // insertNode(3, p->next->next);
 
     // 삭제 코드
-    // deleteNode(p, 300);
+    deleteNode(p, 300);
 
     // 출력 코드
     Node *tmp;
@@ -79,17 +79,19 @@ void deleteList(Node *p)
 
 void deleteNode(Node *p, int data)
 {
-    Node *tmp = p->next;
-    Node *tmp2 = p->next->next;
-    while(tmp){
-        if(tmp->data == data )
-            break;
-        tmp = tmp->next;
-        tmp2 = tmp2->next;
+    Node *curr = p;
+    Node *prev = NULL;
+
+    while(curr != NULL && curr->data != data){
+        prev = curr;
+        curr = curr->next;
     }
-    if(tmp ){
-        Node *tmp3 = tmp;
-        tmp2->next = tmp->next;
-        free(tmp3);
+    if (curr ==NULL)
+        return;
+    if(prev == NULL){
+        p = curr->next;
+    }else{
+        prev->next = curr->next;
     }
+    free(curr);
 }
