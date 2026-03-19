@@ -1,9 +1,11 @@
+// cc -o mqttPub mqttPub.c -lpaho-mqtt3c
+
 #include "MQTTClient.h"
 #include <stdio.h>
 #include <string.h>
 // 브로커 PC의 Windows 실제 IP 주소를 입력하세요
-#define ADDRESS "tcp://172.30.1.82:1883"
-#define CLIENTID "Student_PC_01"
+#define ADDRESS "tcp://163.152.213.106:1883"
+#define CLIENTID "choisugil"
 #define TOPIC "school/test"
 int main()
 {
@@ -16,7 +18,7 @@ int main()
         printf("접속 실패!\n");
         return -1;
     }
-    pubmsg.payload = "C language MQTT Message";
+    pubmsg.payload = "안녕하세요. 최수길입니다. 메세지 한번 보내 보려구요...";
     pubmsg.payloadlen = (int)strlen(pubmsg.payload);
     pubmsg.qos = 1;
     MQTTClient_publishMessage(client, TOPIC, &pubmsg, NULL);
