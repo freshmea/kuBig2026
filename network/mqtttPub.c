@@ -1,0 +1,28 @@
+#include "MQTTClient.h"
+#include <stdio.h>
+#include <string.h>
+// 브로커 PC의 Windows 실제 IP 주소를 입력하세요
+#define ADDRESS "tcp://172.30.1.82:1883"
+#define CLIENTID "Student_PC_01"
+#define TOPIC "school/test"
+int main()
+{
+    MQTTClient client;
+    MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;
+    MQTTClient_message pubmsg = MQTTClient_message_initializer;
+    MQTTClient_create(&client, ADDRESS, CLIENTID, MQTTCLIEN T_PERSISTENCE_NONE, NULL);
+    if (MQTTClient_connect(client, &conn_opts) != MQTTCLIENT_SUCCESS)
+    {
+        printf("접속 실패!\n");
+        return -1;
+    }
+    pubmsg.payload = "C language MQTT Message";
+    pubmsg.payloadlen = (int)strlen(pubmsg.payload);
+    pubmsg.qos = 1;
+    MQTTClient_publishMessage(client, TOPIC, &pubmsg, NUL L);
+
+    printf("메시지 전송 완료!\n");
+    MQTTClient_disconnect(client, 10000);
+    MQTTClient_destroy(&client);
+    return 0;
+}
