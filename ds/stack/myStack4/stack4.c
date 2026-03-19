@@ -23,12 +23,13 @@ void initStack(Stack *ps, int size, int eleSize)
 void push(Stack *ps, const void *pData)
 {
     assert(ps->tos != (ps->pArr + ps->size));
-    memcpy
-    *(ps->tos++) = data;
+    memcpy((unsigned char *)ps->tos, pData, ps->eleSize);
+    ps->tos = (unsigned char *)ps->tos + ps->eleSize;
 }
 
 void pop(Stack *ps, void *pData)
 {
     assert(ps->tos != ps->pArr);
-    return *(--ps->tos);
+    ps->tos = (unsigned char *)ps->tos - ps->eleSize;
+    memcpy(pData, (unsigned char *)ps->tos, ps->eleSize);
 }

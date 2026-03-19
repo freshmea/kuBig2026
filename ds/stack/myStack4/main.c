@@ -14,11 +14,12 @@ int main(void)
     i = 300;
     push(&s1, &i);
 
-    int re = pop(&s1);
+    int re;
+    pop(&s1, &re);
     printf("s1 첫 pop() 리턴 값: %d\n", re);     // 300
-    re = pop(&s1);
+    pop(&s1, &re);
     printf("s1 두번째 pop() 리턴 값: %d\n", re); // 200
-    re = pop(&s1);
+    pop(&s1, &re);
     printf("s1 세번째 pop() 리턴 값: %d\n", re); // 100
 
     double d = 1.1;
