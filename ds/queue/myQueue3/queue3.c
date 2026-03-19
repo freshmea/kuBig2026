@@ -6,6 +6,8 @@ void initQueue(Qu *pQu, int size, int eleSize)
     assert(pQu->pArr != NULL);
     pQu->eleSize = eleSize;
     pQu->size = size;
+    pQu->front = pQu->pArr;
+    pQu->rear = pQu->pArr;
 }
 void cleanupQueue(Qu *pQu)
 {
@@ -13,7 +15,7 @@ void cleanupQueue(Qu *pQu)
 }
 void push(Qu *pQu, const void *pData)
 {
-    assert(pQu->rear != pQu->size);
+    assert(pQu->rear != (pQu->pArr + pQu->size));
     memcpy((unsigned char *)pQu->rear, pData, pQu->eleSize);
     pQu->rear = (unsigned char *)pQu->rear + pQu->eleSize;
 }

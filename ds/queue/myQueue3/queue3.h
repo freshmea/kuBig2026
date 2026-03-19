@@ -8,8 +8,8 @@ typedef struct
 {
     void *pArr;
     int eleSize;
-    int *front;
-    int *rear;
+    void *front;
+    void *rear;
     int size;
 } Qu;
 

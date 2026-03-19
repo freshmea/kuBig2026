@@ -5,7 +5,7 @@ int main(void)
 {
     Qu q1, q2;
     initQueue(&q1, 10, sizeof(int));
-    initQueue(&q1, 100, sizeof(double));
+    initQueue(&q2, 100, sizeof(double));
 
     int i = 100;
     push(&q1, &i);
@@ -56,7 +56,7 @@ int main(void)
         printf("%d번째 pop(): %lf\n", i, re2);
     }
 
-    cleanupStack(&q1);
-    cleanupStack(&q2);
+    cleanupQueue(&q1);
+    cleanupQueue(&q2);
     return 0;
 }
