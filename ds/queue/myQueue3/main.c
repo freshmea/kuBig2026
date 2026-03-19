@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include "stack.h"
+#include "queue3.h"
 
 int main(void)
 {
     Qu q1, q2;
-    initQueue(&q1, sizeof(int));
-    initQueue(&q1, sizeof(double));
+    initQueue(&q1, 10, sizeof(int));
+    initQueue(&q1, 100, sizeof(double));
 
     int i = 100;
     push(&q1, &i);
@@ -16,11 +16,11 @@ int main(void)
 
     int re;
     pop(&q1, &re);
-    printf("q1 첫 pop() 리턴 값: %d\n", re); // 300
+    printf("q1 첫 pop() 리턴 값: %d\n", re); // 100
     pop(&q1, &re);
     printf("q1 두번째 pop() 리턴 값: %d\n", re); // 200
     pop(&q1, &re);
-    printf("q1 세번째 pop() 리턴 값: %d\n", re); // 100
+    printf("q1 세번째 pop() 리턴 값: %d\n", re); // 300
 
     double d = 1.1;
     push(&q2, &d);
@@ -31,11 +31,11 @@ int main(void)
 
     double re2;
     pop(&q2, &re2);
-    printf("s2 첫 pop() 리턴 값: %lf\n", re2); // 300
+    printf("s2 첫 pop() 리턴 값: %lf\n", re2); // 1.1
     pop(&q2, &re2);
-    printf("s2 두번째 pop() 리턴 값: %lf\n", re2); // 200
+    printf("s2 두번째 pop() 리턴 값: %lf\n", re2); // 2.2
     pop(&q2, &re2);
-    printf("s2 세번째 pop() 리턴 값: %lf\n", re2); // 100
+    printf("s2 세번째 pop() 리턴 값: %lf\n", re2); // 3.3
 
     printf("s1 큐 메모리 사이즈는 : %d\n", q1.size);
     printf("s2 큐 메모리 사이즈는 : %d\n", q2.size);
@@ -44,7 +44,8 @@ int main(void)
     // max index 를 넘어 갔을 때 100 개채울 때 에러
     for (int i = 0; i < 101; ++i)
     {
-        push(&q2, (double)i + 3.14);
+        double d = i + 3.14;
+        push(&q2, &d);
         printf("%lf , \n", (double)i + 3.14);
     }
     // 데이터가 없을 때 assert작동 확인
