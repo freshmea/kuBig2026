@@ -10,7 +10,7 @@ int main()
     MQTTClient client;
     MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;
     MQTTClient_message pubmsg = MQTTClient_message_initializer;
-    MQTTClient_create(&client, ADDRESS, CLIENTID, MQTTCLIEN T_PERSISTENCE_NONE, NULL);
+    MQTTClient_create(&client, ADDRESS, CLIENTID, MQTTCLIENT_PERSISTENCE_NONE, NULL);
     if (MQTTClient_connect(client, &conn_opts) != MQTTCLIENT_SUCCESS)
     {
         printf("접속 실패!\n");
@@ -19,7 +19,7 @@ int main()
     pubmsg.payload = "C language MQTT Message";
     pubmsg.payloadlen = (int)strlen(pubmsg.payload);
     pubmsg.qos = 1;
-    MQTTClient_publishMessage(client, TOPIC, &pubmsg, NUL L);
+    MQTTClient_publishMessage(client, TOPIC, &pubmsg, NULL);
 
     printf("메시지 전송 완료!\n");
     MQTTClient_disconnect(client, 10000);
