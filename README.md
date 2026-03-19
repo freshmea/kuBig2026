@@ -143,8 +143,8 @@ git config --global user.name freshmea
 - 2교시: 데이터구조 DataStructure 설명
 - 3교시: 스택 설명, 스택 예제mystack1 - 전역 변수 제거, 구조체 사용mystack2
 - 4교시: 큐 설명, 큐 예제myqeue1 - 전역 변수 제거, 구조체 사용
-- 5교시:
-- 6교시:
-- 7교시:
+- 5교시: 리스트 작성 - linked list 예제
+- 6교시: list1 예제 설명, list1 예제 실습
+- 7교시: 스택 - 동적할당 예제 stack3
 - 8교시:
-- 과제 :
+- 과제 : 없음
