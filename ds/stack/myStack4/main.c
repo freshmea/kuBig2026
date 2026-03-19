@@ -29,13 +29,13 @@ int main(void)
     d = 3.3;
     push(&s2, &d);
 
-    double re;
-    pop(&s2, &re);
-    printf("s2 첫 pop() 리턴 값: %lf\n", re); // 300
-    pop(&s2, &re);
-    printf("s2 두번째 pop() 리턴 값: %lf\n", re); // 200
-    pop(&s2, &re);
-    printf("s2 세번째 pop() 리턴 값: %lf\n", re); // 100
+    double re2;
+    pop(&s2, &re2);
+    printf("s2 첫 pop() 리턴 값: %lf\n", re2); // 300
+    pop(&s2, &re2);
+    printf("s2 두번째 pop() 리턴 값: %lf\n", re2); // 200
+    pop(&s2, &re2);
+    printf("s2 세번째 pop() 리턴 값: %lf\n", re2); // 100
 
 
     printf("s1 스택 메모리 사이즈는 : %d\n", s1.size);
