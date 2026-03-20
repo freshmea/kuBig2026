@@ -118,9 +118,9 @@ void playGame10Frame(Score *player)
         printf("player : %s\n", player->name);
         printf("10 frame 3cast");
         scanf("%d", &player->score[10][3]);
-        setScore(10, 3, player);
         // 점수 계산
         player->frameScore[10] = player->frameScore[9] + player->score[10][1] + player->score[10][2] + player->score[10][3];
+        setScore(10, 3, player);
         setFrameScore(10, player);
         printBoard(player);
     }
