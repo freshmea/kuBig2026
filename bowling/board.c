@@ -32,17 +32,11 @@ void playGame(Score *player, int i)
     setScore(i, 1, player);
     printBoard(player);
 
-    // 스패어 인가? -->
-    if(((player->score[i-1][1])+(player->score[i-1][2])) == 10 && ((player->score[i-1][1] != 10)))
-        setFrameScore(i - 1, player);
-    printBoard(player);
-    // 스트라이크 인가? , 스패어 처리를 했는가?
-    if ((player->score[i-2][1] == 10) && (player->score[i-1][1] == 10))
-        setFrameScore(i - 2, player);
-    printBoard(player);
-
-    if (player->score[i][1] == 10)
+    if (player->score[i][1] == 10){
+        setFrameScore(i, player);
+        printBoard(player);
         return;
+    }
 
     // 점수 입력 2cast
     printf("player : %s\n", player->name);
@@ -51,16 +45,14 @@ void playGame(Score *player, int i)
 
     // 점수 계산
     calScore(player->frameScore, player->score);
-    setScore(i, 1, player);
-    printBoard(player);
-
-    // 합계가 10이였나 스패어처리 성공인가?
-    if((player->score[i-1][1]) == 10){
-        printf("%d frame: %d\n", i - 1, player->frameScore[i - 1]);
-        setFrameScore(i - 1, player);
+    setScore(i, 2, player);
+    if (player->score[i][1] + player->score[i][2] == 10)
+    {
+        printf("%d frame : %d\n", i, player->frameScore[i]);
+        setFrameScore(i, player);
         printBoard(player);
     }
-    // ..
+
     if ((player->score[i][1] + player->score[i][2]) < 10 && (i>0))
     {
         printf("%d frame: %d\n", i, player->frameScore[i]);
