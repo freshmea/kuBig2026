@@ -2,9 +2,10 @@
 
 ---
 
-고려대 개발자 양성과정에서 쓰이는 저장소이다.
+고려대 개발자 양성과정에서 쓰이는 저장소 입니다.
 
 [교육생 슬라이드](https://docs.google.com/presentation/d/1igQGshYUiAKx2f91brdvskaBBEhlvog_YM9Dt9nse1I/edit?usp=sharing)
+[C 언어 시험 링크](https://forms.gle/fgCp9ZdNhPGGpKwJ6)
 
 ```text
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
