@@ -42,5 +42,6 @@
         "/home/aa/robot_ws/install/homework/lib/python3.10/site-packages",
         "/opt/ros/humble/lib/python3.10/site-packages",
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
-    ]
+    ],
+    "C_Cpp.default.compilerPath": "/usr/bin/arm-none-eabi-gcc"
 }
