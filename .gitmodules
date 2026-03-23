@@ -1,0 +1,3 @@
+[submodule "atmega128/deps/arduino-core"]
+	path = atmega128/deps/arduino-core
+	url = https://github.com/arduino/ArduinoCore-avr.git
