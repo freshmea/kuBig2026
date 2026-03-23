@@ -1,3 +1,5 @@
+// git submodule add https://github.com/arduino/ArduinoCore-avr.git deps/arduino-core
+
 #include <avr/io.h>
 #include <util/delay.h>
 
