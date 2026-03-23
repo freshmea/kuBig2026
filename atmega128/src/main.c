@@ -1,4 +1,7 @@
 // git submodule add https://github.com/arduino/ArduinoCore-avr.git deps/arduino-core
+// sudo apt install gcc-avr avr-libc binutils-avr
+// sudo apt install usbutils
+// winget install --interactive --exact dorssel.usbipd-win
 
 #include <avr/io.h>
 #include <util/delay.h>
