@@ -6,30 +6,31 @@
                 "${workspaceFolder}/atmega128/**",
                 "/usr/local/include/**",
                 "/usr/include/**",
-                "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
-                "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
-                "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/libraries/**",
-                "/home/aa/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/avr/include/**"
+                // "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
+                // "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
+                // "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/libraries/**",
+                // "/home/aa/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/avr/include/**",
+                "/usr/lib/avr/**"
             ],
-            "browse": {
-                "path": [
-                    "${workspaceFolder}/atmega128",
-                    "/usr/local/include",
-                    "/usr/include",
-                    "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
-                    "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
-                    "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/libraries",
-                    "/home/aa/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/avr/include"
-                ],
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
-            },
+            // "browse": {
+            //     "path": [
+            //         "${workspaceFolder}/atmega128",
+            //         "/usr/local/include",
+            //         "/usr/include",
+            //         "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
+            //         "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/variants/standard",
+            //         "/home/aa/.arduino15/packages/arduino/hardware/avr/1.8.6/libraries",
+            //         "/home/aa/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/avr/include"
+            //     ],
+            //     "limitSymbolsToIncludedHeaders": true,
+            //     "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
+            // },
             "defines": [
                 "F_CPU=16000000UL",
                 "__AVR__",
                 "__AVR_ATmega128__"
             ],
-            "compilerPath": "/home/aa/.arduino15/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino7/bin/avr-gcc",
+            "compilerPath": "/usr/bin/avr-gcc",
             "compilerArgs": [
                 "-mmcu=atmega128",
                 "-DF_CPU=16000000UL"
@@ -39,6 +40,7 @@
             "intelliSenseMode": "linux-gcc-x64"
         },
         {
+            "name": "ros2",
             "browse": {
                 "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
                 "limitSymbolsToIncludedHeaders": false
@@ -59,7 +61,6 @@
                 "/opt/ros/humble/include/**",
                 "/usr/include/**"
             ],
-            "name": "ros2",
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/arm-none-eabi-gcc",
             "cStandard": "gnu11",

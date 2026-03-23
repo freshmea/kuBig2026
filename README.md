@@ -182,7 +182,6 @@ git config --global user.name freshmea
 - 8교시: 시험 문제 풀이
 - 과제 : 없음
 
-
 ---
 
 ## 2026-3-23
@@ -190,10 +189,10 @@ git config --global user.name freshmea
 ---
 
 - 1교시: 마이크로 컨트롤러란
-- 2교시: ATmega128A 설명, 아두이노 보드 설명
-- 3교시:
-- 4교시:
-- 5교시:
+- 2교시: Atmega128A 설명, 아두이노 보드 설명
+- 3교시: Atmega128A 내부 모듈 설명 - cpu, flash, sram, eeprom, gpio, uart, adc, timer
+- 4교시: CMake 프로젝트 파일 작성, main.c 작성
+- 5교시: 빌드 실행, isp mk2 usb 인식, windows usbipd 설치, wsl2 usbip 설치, usbipd wsl2 연결
 - 6교시:
 - 7교시:
 - 8교시:
