@@ -193,7 +193,7 @@ git config --global user.name freshmea
 - 3교시: Atmega128A 내부 모듈 설명 - cpu, flash, sram, eeprom, gpio, uart, adc, timer
 - 4교시: CMake 프로젝트 파일 작성, main.c 작성
 - 5교시: 빌드 실행, isp mk2 usb 인식, windows usbipd 설치, wsl2 usbip 설치, usbipd wsl2 연결
-- 6교시:
-- 7교시:
-- 8교시:
-- 과제 :
+- 6교시: led 깜빡이 예제 - main.c led1.c
+- 7교시: led 비트연산 예제 - led2.c led3.c
+- 8교시: 복합 비트 연산자로 특정 비트 제어 - led4.c
+- 과제 : 책 1 chapter 2 chapter 읽기(기초 CS 개념)
