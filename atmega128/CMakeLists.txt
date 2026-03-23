@@ -14,7 +14,7 @@ set(PROG_TYPE stk500v2)
 set(PROG_PORT usb)
 
 # --- 실행 파일 및 옵션 ---
-add_executable(${PROJECT_NAME}.elf src/led2.c)
+add_executable(${PROJECT_NAME}.elf src/led4.c)
 
 target_compile_options(${PROJECT_NAME}.elf PUBLIC
     -mmcu=${MCU}
