@@ -197,3 +197,24 @@ git config --global user.name freshmea
 - 7교시: led 비트연산 예제 - led2.c led3.c
 - 8교시: 복합 비트 연산자로 특정 비트 제어 - led4.c
 - 과제 : 책 1 chapter 2 chapter 읽기(기초 CS 개념)
+
+---
+
+## 2026-3-24
+
+---
+
+```text
+SUBSYSTEM=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2104", MODE="0666"
+
+```
+
+- 1교시: 입력 예제 PINE - switch1
+- 2교시: 입력 예제 PINE - switch2, chattering, debouncing 설명, pull-up, pull-down 저항
+- 3교시: 예제 설명, udev 설정
+- 4교시:
+- 5교시:
+- 6교시:
+- 7교시:
+- 8교시:
+- 과제 : 없음

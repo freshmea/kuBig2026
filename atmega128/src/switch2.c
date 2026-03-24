@@ -1,7 +1,9 @@
+// sudo udevadm control --reload-rules
+// sudo udevadm trigger
 #include <avr/io.h>
 #include <util/delay.h>
 
-int main(void){
+    int main(void){
     uint8_t switch_flag = 0, switch_flag_pre = 0x01;
 
     DDRC = 0x0F;
