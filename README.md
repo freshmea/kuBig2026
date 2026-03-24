@@ -212,7 +212,7 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2104", MODE="0666"
 - 1교시: 입력 예제 PINE - switch1
 - 2교시: 입력 예제 PINE - switch2, chattering, debouncing 설명, pull-up, pull-down 저항
 - 3교시: 예제 설명, udev 설정
-- 4교시:
+- 4교시: fnd 예제 설명, fnd1.c 작성, switch_fnd 과제 실습
 - 5교시:
 - 6교시:
 - 7교시:
