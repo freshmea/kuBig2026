@@ -7,14 +7,16 @@ volatile uint8_t milliseconds = 0;
 
 ISR(TIMER0_OVF_vect)
 {
+    // 차단 불가능...
     ++milliseconds;
+    // 차단 가능..
 }
 
 void timer0_init(void)
 {
     TCCR0 = _BV(CS02) | _BV(CS01) | _BV(CS00);
     TIMSK |= _BV(TOIE0);
-    sei();
+    sei(); // 차단 가능
 }
 
 int main()
