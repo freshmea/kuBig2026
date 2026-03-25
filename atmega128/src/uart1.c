@@ -21,7 +21,7 @@ int main(void){
 
     UCSR0A = 0x00;
     UCSR0B = 0x18; // 0x00011000 rx tx enable
-    UCSR0C = 0x16; // 0b00010110 no Parity, 1 stop bit
+    UCSR0C = 0x16; // 0b00010110, no Parity, 1 stop bit
 
     UBRR0H = 0x00;
     UBRR0L = 0x07; // 115200 bps
