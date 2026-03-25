@@ -218,3 +218,34 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2104", MODE="0666"
 - 7교시: 외부 인터럽트
 - 8교시: 타이머 인터럽트
 - 과제 : 없음
+
+---
+
+## 2026-3-25
+
+---
+
+```text
+// 윈도우 설정
+usbipd list
+usbipd bind --busid 7-1
+usbipd attach --wsl --busid 7-1
+
+// udev 설정 파일 내용 99_avrisp.rules
+SUBSYSTEM=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2104", MODE="0666"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE="0666"
+
+// udev 설정 적용
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+```
+
+- 1교시: 입력 예제 PINE - switch1
+- 2교시: 입력 예제 PINE - switch2, chattering, debouncing 설명, pull-up, pull-down 저항
+- 3교시: 예제 설명, udev 설정
+- 4교시: fnd 예제 설명, fnd1.c 작성, switch_fnd 과제 실습
+- 5교시: fnd2 타이머 인터럽트 fnd2.c
+- 6교시: switch_fnd 과제 풀이
+- 7교시: 외부 인터럽트
+- 8교시: 타이머 인터럽트
+- 과제 : 없음
