@@ -15,9 +15,9 @@ int main(void){
 
     while(1)
     {
-        if (timer0_cnt == 100)
+        if (timer0_cnt == 100) // 1초 마다 if 문이 작동
         {
-            led_data++;
+            led_data++; // 얼마 만큼의 시간이 흐르면 실행되는가? -> 1초 마다 작동
             if (led_data > 0x0F)
                 led_data = 0;
             timer0_cnt = 0;
@@ -29,7 +29,7 @@ int main(void){
 ISR(TIMER0_OVF_vect)
 {
     cli();
-    TCNT0 = 112;
+    TCNT0 = 112; // 112 ~ 255 144 번//  1번 카운트 할때 16M /1024 = 15625  1초 -> 117번
     timer0_cnt++;
     sei();
 }
