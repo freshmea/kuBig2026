@@ -29,7 +29,6 @@ int main(void)
     char cData;
     // char buffer[32];
     uint8_t count = 0;
-
     printf("Hi, I'm Atmega128");
     lcdGotoXY(0, 0);
 
@@ -43,6 +42,8 @@ int main(void)
         while(UCSR0A & (1 << RXC0))
         {
             count++;
+            // scanf("%s", buffer);
+            // lcdPrint(buffer);
             cData = fgetc(stdin);
             lcdDataWrite(cData);
             lcdDataWrite('0' + count);
