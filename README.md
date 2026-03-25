@@ -246,6 +246,6 @@ sudo udevadm trigger
 - 4교시: USART 개념 설명, 레지스트리 설명
 - 5교시: uart1  uart1.c 작성
 - 6교시: uart2 예제 설명, stdio.h 사용하기, 외부 라이브러리 사용하기
-- 7교시: lcd 사용방법, uart3 예제 설명,
+- 7교시: lcd 사용방법 - lcd.c, uart3 예제 설명,
 - 8교시:
 - 과제 :

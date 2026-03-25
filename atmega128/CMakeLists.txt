@@ -13,6 +13,7 @@ set(F_CPU 16000000UL)
 set(PROG_TYPE stk500v2)
 set(PROG_PORT usb)
 set(UART0_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib/uart0")
+set(LCD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib/lcd")
 
 # --- 1. src 폴더의 모든 .c 파일 목록 가져오기 ---
 file(GLOB SRC_FILES "src/*.c")
@@ -28,6 +29,11 @@ foreach(SOURCE_FILE ${SRC_FILES})
     if(EXE_NAME STREQUAL "uart2")
         target_sources(${EXE_NAME}.elf PRIVATE "${UART0_DIR}/uart0.c")
         target_include_directories(${EXE_NAME}.elf PRIVATE "${UART0_DIR}")
+    endif()
+
+    if(EXE_NAME STREQUAL "lcd1")
+        target_sources(${EXE_NAME}.elf PRIVATE "${LCD_DIR}/lcd.c")
+        target_include_directories(${EXE_NAME}.elf PRIVATE "${LCD_DIR}")
     endif()
 
     target_compile_options(${EXE_NAME}.elf PUBLIC

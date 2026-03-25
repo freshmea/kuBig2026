@@ -92,8 +92,7 @@
 // If your clock frequency is low, you can reduce the number of NOPs in the
 // delay.  If your clock frequency is high, you may need to add NOPs.
 // The number of NOPs should be between at least 1 and up to 20.
-#define LCD_DELAY                                                                   \
-    asm("nop\n nop\n nop\n nop\n nop\n nop\n nop\n nop\n nop\n nop\n nop\n nop\n"); \
-    volatile
+#define LCD_DELAY \
+    __asm__ __volatile__("nop\n nop\n nop\n nop\n nop\n nop\n nop\n nop\n nop\n nop\n nop\n nop\n")
 
 #endif
