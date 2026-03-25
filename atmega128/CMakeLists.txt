@@ -36,6 +36,13 @@ foreach(SOURCE_FILE ${SRC_FILES})
         target_include_directories(${EXE_NAME}.elf PRIVATE "${LCD_DIR}")
     endif()
 
+    if(EXE_NAME STREQUAL "uart3")
+        target_sources(${EXE_NAME}.elf PRIVATE "${LCD_DIR}/lcd.c")
+        target_include_directories(${EXE_NAME}.elf PRIVATE "${LCD_DIR}")
+        target_sources(${EXE_NAME}.elf PRIVATE "${UART0_DIR}/uart0.c")
+        target_include_directories(${EXE_NAME}.elf PRIVATE "${UART0_DIR}")
+    endif()
+
     target_compile_options(${EXE_NAME}.elf PUBLIC
         -mmcu=${MCU}
         -DF_CPU=${F_CPU}
