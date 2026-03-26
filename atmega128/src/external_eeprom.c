@@ -1,6 +1,6 @@
 #include "at25160.h"
 #include "lcd.h"
-#include <avr/delay.h>
+#include <util/delay.h>
 #include <avr/io.h>
 
 #define ARRAY_SIZE(array) (sizeof(array)/ sizeof(array[0]))
@@ -46,7 +46,7 @@ int main(void)
         }
 
         lcdGotoXY(0, 0);
-        lcdPrint(buf3);
+        lcdPrint((char *)buf3);
         _delay_ms(2000);
 
         lcdClear();
