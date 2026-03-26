@@ -44,35 +44,32 @@ int main(void)
 
 void printf_2dot1(uint8_t sense, uint16_t sense_temp)
 {
-    uint8_t s100, s10;
     if (sense == TEMP)
-    {
         lcdPrintData(" Temp: ", 7);
-
-        s100 = sense_temp / 100;
-        if(s100>0)
-            lcdDataWrite(s100 + '0');
-
-        s10 = sense_temp / 10 - s100 * 10;
-        if (s10 > 0)
-            lcdDataWrite(s10 + '0');
-        lcdDataWrite('.');
-        lcdDataWrite(sense_temp % 10 + '0');
-        lcdDataWrite('C');
-    }
-    else if (sense == HUMIDITY)
-    {
+    else
         lcdPrintData(" Humi: ", 7);
 
-        s100 = sense_temp / 100;
-        if (s100 > 0)
-            lcdDataWrite(s100 + '0');
+    // 각 자릿수 분리
+    uint8_t d100 = (sense_temp / 100) % 10; // 백의 자리
+    uint8_t d10 = (sense_temp / 10) % 10;   // 십의 자리
+    uint8_t d1 = sense_temp % 10;           // 소수점 자리
 
-        s10 = sense_temp / 10 - s100 * 10;
-        if (s10 > 0)
-            lcdDataWrite(s10 + '0');
-        lcdDataWrite('.');
-        lcdDataWrite(sense_temp % 10 + '0');
-        lcdDataWrite('%');
+    // 백의 자리가 있으면 출력
+    if (d100 > 0)
+        lcdDataWrite(d100 + '0');
+
+    // 십의 자리는 백의 자리가 출력됐으면 '0'이라도 출력, 아니면 0보다 클 때만 출력
+    if (d100 > 0 || d10 > 0)
+    {
+        lcdDataWrite(d10 + '0');
     }
+    else
+    {
+        // 0.5도 같은 경우를 위해 일의 자리가 0이면 0이라도 찍어줌
+        lcdDataWrite('0');
+    }
+
+    lcdDataWrite('.');
+    lcdDataWrite(d1 + '0');
+    lcdDataWrite(sense == TEMP ? 'C' : '%');
 }
