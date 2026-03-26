@@ -58,9 +58,9 @@ sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-- 1교시: 입력 예제 PINE - switch1
-- 2교시: 입력 예제 PINE - switch2, chattering, debouncing 설명, pull-up, pull-down 저항
-- 3교시: 예제 설명, udev 설정
+- 1교시:
+- 2교시:
+- 3교시:
 - 4교시: USART 개념 설명, 레지스트리 설명
 - 5교시: uart1  uart1.c 작성
 - 6교시: uart2 예제 설명, stdio.h 사용하기, 외부 라이브러리 사용하기
