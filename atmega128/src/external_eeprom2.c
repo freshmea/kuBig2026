@@ -1,13 +1,9 @@
 #include "at25160.h"
 #include "lcd.h"
-#include <util/delay.h>
 #include <avr/io.h>
+#include <util/delay.h>
 
-#define ARRAY_SIZE(array) (sizeof(array)/ sizeof(array[0]))
-
-uint8_t msg1[] = "welcome!!";
-uint8_t msg2[] = "Atmega128-World!!";
-uint8_t msg3[] = "SPI-Flash Example";
+#define ARRAY_SIZE(array) (sizeof(array) / sizeof(array[0]))
 
 int main(void)
 {
@@ -19,10 +15,6 @@ int main(void)
     SPI_Init(); // PB0123
     lcdInit();
 
-    at25160_Write_Arry(0x0100, msg1, ARRAY_SIZE(msg1));
-    at25160_Write_Arry(0x0200, msg2, ARRAY_SIZE(msg2));
-    at25160_Write_Arry(0x0300, msg3, ARRAY_SIZE(msg3));
-
     at25160_Read_Arry(0x0100, buf1, ARRAY_SIZE(buf1));
     at25160_Read_Arry(0x0200, buf2, ARRAY_SIZE(buf2));
     at25160_Read_Arry(0x0300, buf3, ARRAY_SIZE(buf3));
@@ -30,15 +22,15 @@ int main(void)
     while (1)
     {
         lcdGotoXY(0, 0);
-        for (i = 0; i < ARRAY_SIZE(msg1) - 1;i++)
+        for (i = 0; i < 10 - 1; i++)
         {
             lcdDataWrite(buf1[i]);
             _delay_ms(100);
         }
 
-        i=0;
+        i = 0;
         lcdGotoXY(0, 1);
-        while(buf2[i])
+        while (buf2[i])
         {
             lcdDataWrite(buf2[i]);
             ++i;

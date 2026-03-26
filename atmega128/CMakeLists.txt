@@ -55,6 +55,13 @@ foreach(SOURCE_FILE ${SRC_FILES})
         target_include_directories(${EXE_NAME}.elf PRIVATE "${AT25_DIR}")
     endif()
 
+    if(EXE_NAME STREQUAL "external_eeprom2")
+        target_sources(${EXE_NAME}.elf PRIVATE "${LCD_DIR}/lcd.c")
+        target_include_directories(${EXE_NAME}.elf PRIVATE "${LCD_DIR}")
+        target_sources(${EXE_NAME}.elf PRIVATE "${AT25_DIR}/at25160.c")
+        target_include_directories(${EXE_NAME}.elf PRIVATE "${AT25_DIR}")
+    endif()
+
     if(EXE_NAME STREQUAL "i2c_tempHumi")
         target_sources(${EXE_NAME}.elf PRIVATE "${LCD_DIR}/lcd.c")
         target_include_directories(${EXE_NAME}.elf PRIVATE "${LCD_DIR}")
