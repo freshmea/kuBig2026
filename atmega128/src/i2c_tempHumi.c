@@ -16,7 +16,7 @@ int main(void)
     SHT2x_Init();
     nt16 sRH;
     nt16 sT;
-    uint8_t error;
+    uint8_t error = 0;
 
     while(1)
     {
