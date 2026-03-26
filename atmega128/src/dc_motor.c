@@ -14,7 +14,7 @@ int main(void)
         _delay_ms(500);
         PORTD &= ~_BV(PD4);
         PORTD |= _BV(PD5);
-        PORTD |= _BV(PB5);
+        PORTB |= _BV(PB5);
         _delay_ms(500);
     }
     return 0;
