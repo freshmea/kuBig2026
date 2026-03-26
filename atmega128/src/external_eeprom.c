@@ -24,8 +24,8 @@ int main(void)
     at25160_Write_Arry(0x0300, msg3, ARRAY_SIZE(msg3));
 
     at25160_Read_Arry(0x0100, buf1, ARRAY_SIZE(buf1));
-    at25160_Read_Arry(0x0100, buf2, ARRAY_SIZE(buf2));
-    at25160_Read_Arry(0x0100, buf3, ARRAY_SIZE(buf3));
+    at25160_Read_Arry(0x0200, buf2, ARRAY_SIZE(buf2));
+    at25160_Read_Arry(0x0300, buf3, ARRAY_SIZE(buf3));
 
     while (1)
     {
