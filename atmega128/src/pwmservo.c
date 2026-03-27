@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    // 서보 PWM 선 PE5
+    // 서보 PWM 선 PE3
     DDRE = _BV(PE3);
 
     TCCR3A = _BV(COM3A1) | _BV(WGM31);
@@ -22,14 +22,14 @@ int main(void)
 
     while (1)
     {
-        for (int pulse = 2000; pulse <= 4000;pulse +=40){
+        for (int pulse = 2000; pulse <= 8000;pulse +=40){
             OCR3A = pulse;
             itoa(pulse, buffer, 10);
             lcdGotoXY(0, 0);
             lcdPrint(buffer);
             _delay_ms(20);
         }
-        for (int pulse = 4000; pulse <= 2000; pulse -= 40)
+        for (int pulse = 8000; pulse >= 2000; pulse -= 40)
         {
             OCR3A = pulse;
             itoa(pulse, buffer, 10);
