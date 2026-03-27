@@ -16,7 +16,10 @@ int main(void)
     ICR3 = 40000; // 20ms 50hz .. 2000000-> 1초 ?? -> 0.02초
     OCR3A = 3000; // 40000 : 20 ? : 2 2000 ~ 4000
 
+    lcdInit();
+    lcdClear();
     char buffer[16];
+
     while (1)
     {
         for (int pulse = 2000; pulse <= 4000;pulse +=40){
