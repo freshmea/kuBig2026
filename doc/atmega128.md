@@ -78,8 +78,8 @@ sudo udevadm trigger
 - 2교시: 가변 저항 읽기
 - 3교시: dc 모터 제어 예제 설명, dc_motor.c 작성
 - 4교시: pwm 개념 설명, 레지스트리 설명, dc_pwm.c 작성
-- 5교시:
-- 6교시:
-- 7교시:
-- 8교시:
+- 5교시: dc_pwm_vr 예제 설명, dc_pwm_vr.c 작성, 버저 예제 설명, buzzer.c 작성
+- 6교시: i2c 개념 설명, 레지스트리 설명, i2c_tempHumi 작성
+- 7교시: SPI 개념 설명, 레지스트리 설명, eeprom 개념 설명
+- 8교시: eeprom 쓰기 예제, eeprom.c 작성 eeprom 읽기 예제
 - 과제 : 없음

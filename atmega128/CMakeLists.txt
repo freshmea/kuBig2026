@@ -38,6 +38,11 @@ foreach(SOURCE_FILE ${SRC_FILES})
         target_include_directories(${EXE_NAME}.elf PRIVATE "${LCD_DIR}")
     endif()
 
+    if(EXE_NAME STREQUAL "pwmservo")
+        target_sources(${EXE_NAME}.elf PRIVATE "${LCD_DIR}/lcd.c")
+        target_include_directories(${EXE_NAME}.elf PRIVATE "${LCD_DIR}")
+    endif()
+
     if(EXE_NAME STREQUAL "cds")
         target_sources(${EXE_NAME}.elf PRIVATE "${LCD_DIR}/lcd.c")
         target_include_directories(${EXE_NAME}.elf PRIVATE "${LCD_DIR}")
