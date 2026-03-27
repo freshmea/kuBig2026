@@ -83,3 +83,19 @@ sudo udevadm trigger
 - 7교시: SPI 개념 설명, 레지스트리 설명, eeprom 개념 설명
 - 8교시: eeprom 쓰기 예제, eeprom.c 작성 eeprom 읽기 예제
 - 과제 : 없음
+
+---
+
+## 2026-3-27
+
+---
+
+- 1교시: 복습, servo 모터 제어 예제 설명, servo.c 작성
+- 2교시: servo 모터 제어 예제 switch_servo.c 작성1
+- 3교시: servo 모터 제어 예제 switch_servo.c 작성2
+- 4교시: pir 센서 예제 설명, pir.c 작성
+- 5교시: 교재 리뷰
+- 6교시: 교재 리뷰
+- 7교시: Pico2W 보드 설명, Pico2W 보드 실습
+- 8교시: 시험
+- 과제 : 없음

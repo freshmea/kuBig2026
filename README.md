@@ -31,4 +31,4 @@
   - Atmega128의 기본적인 사용법을 익히고 이를 이용한 프로젝트를 수행한다.
   - Atmega128의 입출력을 이용한 프로젝트를 수행한다.
 - [과정 진행 사항](doc/atmega128.md)
-- 시험 링크 :
+- [Atmega128 시험 링크](https://forms.gle/oJrCYyPsPQ7hWCce6)
