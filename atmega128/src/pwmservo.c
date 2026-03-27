@@ -22,14 +22,14 @@ int main(void)
 
     while (1)
     {
-        for (int pulse = 2000; pulse <= 8000;pulse +=40){
+        for (int pulse = 2000; pulse <= 4000;pulse +=40){
             OCR3A = pulse;
             itoa(pulse, buffer, 10);
             lcdGotoXY(0, 0);
             lcdPrint(buffer);
             _delay_ms(20);
         }
-        for (int pulse = 8000; pulse >= 2000; pulse -= 40)
+        for (int pulse = 4000; pulse >= 2000; pulse -= 40)
         {
             OCR3A = pulse;
             itoa(pulse, buffer, 10);
