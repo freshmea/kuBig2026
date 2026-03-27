@@ -1,3 +1,6 @@
 [submodule "atmega128/deps/arduino-core"]
 	path = atmega128/deps/arduino-core
 	url = https://github.com/arduino/ArduinoCore-avr.git
+[submodule "pico/deps/pico-sdk"]
+	path = pico/deps/pico-sdk
+	url = https://github.com/raspberrypi/pico-sdk.git
