@@ -47,7 +47,8 @@
                 "limitSymbolsToIncludedHeaders": false
             },
             "compileCommands": [
-                "${workspaceFolder}/build/compile_commands.json"
+                "${workspaceFolder}/build/compile_commands.json",
+                "${workspaceFolder}/build/pico-build/compile_commands.json"
             ],
             "includePath": [
                 "/home/aa/turtlebot3_ws/install/turtlebot3_fake_node/include/**",
