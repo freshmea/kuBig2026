@@ -79,7 +79,7 @@ typedef struct {
 #define MQTT_PUBLISH_RETAIN 0
 
 // topic used for last will and testament
-#define MQTT_WILL_TOPIC "school/test"
+#define MQTT_WILL_TOPIC "/online"
 #define MQTT_WILL_MSG "0"
 #define MQTT_WILL_QOS 1
 
@@ -290,7 +290,9 @@ static void dns_found(const char *hostname, const ip_addr_t *ipaddr, void *arg) 
 
 int main(void) {
     stdio_init_all();
+    sleep_ms(2000);
     INFO_printf("mqtt client starting\n");
+    INFO_printf("stdio over USB CDC and UART0 is enabled\n");
 
     adc_init();
     adc_set_temp_sensor_enabled(true);

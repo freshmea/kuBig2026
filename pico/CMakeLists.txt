@@ -74,6 +74,8 @@ target_compile_definitions(picow_mqtt_client PRIVATE
     WIFI_SSID=\"${WIFI_SSID}\"
     WIFI_PASSWORD=\"${WIFI_PASSWORD}\"
     MQTT_SERVER=\"${MQTT_SERVER}\"
+    PICO_STDIO_USB_CONNECT_WAIT_TIMEOUT_MS=3000
+    PICO_STDIO_USB_POST_CONNECT_WAIT_DELAY_MS=200
     )
 
 if (EXISTS "${MQTT_CERT_PATH}/${MQTT_CERT_INC}")
@@ -99,7 +101,7 @@ endif()
 
 
 pico_enable_stdio_usb(picow_mqtt_client 1)
-pico_enable_stdio_uart(picow_mqtt_client 0)
+pico_enable_stdio_uart(picow_mqtt_client 1)
 
 pico_add_extra_outputs(hello_pico)
 pico_add_extra_outputs(blink)
