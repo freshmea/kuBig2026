@@ -47,6 +47,7 @@
                 "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
                 "limitSymbolsToIncludedHeaders": false
             },
+            "configurationProvider": "ms-vscode.cmake-tools",
             "compileCommands": [
                 "${workspaceFolder}/build/compile_commands.json",
                 "${workspaceFolder}/build/pico-build/compile_commands.json"
