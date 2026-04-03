@@ -10,7 +10,7 @@ int main(void)
     fgets(string1, 10, stdin);
     printf("%s", string1);
     printf("문자열을 넣으시오 : \n");
-    scanf("%s", string1);
+    scanf("%99s", string1);
     // fscanf(stdin, "%s", string1);
     printf("%s", string1);
     return 0;

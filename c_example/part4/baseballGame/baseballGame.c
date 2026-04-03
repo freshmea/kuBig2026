@@ -1,5 +1,21 @@
 #include "baseballGame.h"
 
+static bool has_duplicate_digits(const int *numbers)
+{
+    for (int i = 0; i < SIZE; ++i)
+    {
+        for (int j = i + 1; j < SIZE; ++j)
+        {
+            if (numbers[i] == numbers[j])
+            {
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
 void generate_number(int *question)
 {
     srand(time(NULL));
@@ -28,10 +44,38 @@ void generate_number(int *question)
 
 void input_numbers(int *answer)
 {
-    printf("숫자를 %d개 넣으세요: \n", SIZE);
-    for (int i = 0; i < SIZE; ++i)
+    while (true)
     {
-        scanf("%d", &answer[i]);
+        printf("1부터 9 사이의 서로 다른 숫자 %d개를 넣으세요:\n", SIZE);
+
+        for (int i = 0; i < SIZE; ++i)
+        {
+            scanf("%d", &answer[i]);
+        }
+
+        bool in_range = true;
+        for (int i = 0; i < SIZE; ++i)
+        {
+            if (answer[i] < 1 || answer[i] > 9)
+            {
+                in_range = false;
+                break;
+            }
+        }
+
+        if (!in_range)
+        {
+            printf("1부터 9 사이 숫자만 입력하세요.\n");
+            continue;
+        }
+
+        if (has_duplicate_digits(answer))
+        {
+            printf("중복되지 않은 숫자를 입력하세요.\n");
+            continue;
+        }
+
+        break;
     }
 }
 

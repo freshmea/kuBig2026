@@ -16,19 +16,50 @@
 // -----------------------------------------------
 // **table 포인터를 쓰지 않으려면 쓰지 않고 결과만 만들어도 됨
 #include "scoreProcess.h"
+#include <string.h>
+
+static int build_source_path(char *buffer, size_t buffer_size, const char *filename)
+{
+    const char *source_file = __FILE__;
+    const char *last_slash = strrchr(source_file, '/');
+    size_t dir_length;
+
+    if (last_slash == NULL)
+    {
+        return snprintf(buffer, buffer_size, "%s", filename) >= (int)buffer_size ? -1 : 0;
+    }
+
+    dir_length = (size_t)(last_slash - source_file);
+    if (dir_length + 1 + strlen(filename) + 1 > buffer_size)
+    {
+        return -1;
+    }
+
+    memcpy(buffer, source_file, dir_length);
+    buffer[dir_length] = '/';
+    strcpy(buffer + dir_length + 1, filename);
+    return 0;
+}
 
 int main(void){
-    char *finPath = "/home/aa/kuBig2026/c_example/part6/scoreProcess/score.dat";
-    char *foutPath = "/home/aa/kuBig2026/c_example/part6/scoreProcess/score.out";
+    char finPath[sizeof(__FILE__) + 32];
+    char foutPath[sizeof(__FILE__) + 32];
+
+    if (build_source_path(finPath, sizeof(finPath), "score.dat") != 0 ||
+        build_source_path(foutPath, sizeof(foutPath), "score.out") != 0){
+        fprintf(stderr, "파일 경로를 만들 수 없습니다.\n");
+        return 1;
+    }
+
     FILE *fin = fopen(finPath, "r");
     FILE *fout = fopen(foutPath, "w");
 
-    int n = count_students(fin);
-
     if (fin == NULL || fout == NULL){
-        fprintf(stderr, "파일을 열수 없습니다.\n");
+        fprintf(stderr, "입력 또는 출력 파일을 열 수 없습니다. 예제 폴더의 데이터 파일을 확인하세요.\n");
         return 1;
     }
+
+    int n = count_students(fin);
 
     Sdata *students = (Sdata *)malloc(sizeof(Sdata) * n);
     Sdata **table = (Sdata **)malloc(sizeof(Sdata) * n);
@@ -43,6 +74,7 @@ int main(void){
     calculateRank(students, n);
     sortPointers(students, table, n);
     printResult(fout, table, n);
+    printf("성적 처리 결과 생성 완료: %s\n", foutPath);
 
     free(table);
     free(students);

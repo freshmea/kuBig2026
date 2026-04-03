@@ -18,6 +18,6 @@ int main()
         }
     }
 
-    printf("축하합니다.congraturation!! 시도 횟수는 %d 입니다.\n", count);
+    printf("축하합니다. 시도 횟수는 %d 입니다.\n", count);
     return 0;
 }

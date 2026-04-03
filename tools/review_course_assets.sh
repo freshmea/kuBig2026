@@ -198,6 +198,10 @@ done < <(
     {
         printf '%s\n' "$ROOT_DIR/README.md"
         find "$ROOT_DIR/doc" -type f -name '*.md' | sort
+        find "$ROOT_DIR/c_example" -type f -name '*.md' | sort
+        find "$ROOT_DIR/ds" -type f -name '*.md' | sort
+        find "$ROOT_DIR/network" -type f -name '*.md' | sort
+        find "$ROOT_DIR/atmega128" -maxdepth 1 -type f -name '*.md' | sort
         find "$ROOT_DIR/bowling" -maxdepth 1 -type f -name '*.md' | sort
     } | uniq
 )

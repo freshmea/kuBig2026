@@ -31,3 +31,7 @@
 
 - [C 실습 맵](../doc/C_실습_맵.md)
 - [실습 제출 템플릿](../doc/실습_제출_템플릿.md)
+- [자료구조 예제 인덱스](../ds/README.md)
+- [숫자 야구 실습지](part4/baseballGame/실습지.md)
+- [성적 처리 실습지](part6/scoreProcess/실습지.md)
+- [IoT 로그 분석 실습지](part6/iotLogReport/실습지.md)

@@ -29,7 +29,7 @@ int main(void){
 void inputList(Address *pList)
 {
     for (int i = 0; i < 5;++i){
-        scanf("%s %d %s %s", (pList + i)->name, &(pList + i)->age, (pList + i)->tel, (pList + i)->addr);
+        scanf("%19s %d %19s %79s", (pList + i)->name, &(pList + i)->age, (pList + i)->tel, (pList + i)->addr);
     }
 }
 

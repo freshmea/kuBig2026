@@ -18,7 +18,7 @@ void inputData(FILE *fp, Sdata *s, int n)
 {
     for (int i = 0; i < n; ++i)
     {
-        fscanf(fp, "%s %d %d %d", s[i].name, &s[i].kor, &s[i].eng, &s[i].mat);
+        fscanf(fp, "%19s %d %d %d", s[i].name, &s[i].kor, &s[i].eng, &s[i].mat);
     }
 }
 void calculateScore(Sdata *s, int n)
