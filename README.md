@@ -40,9 +40,11 @@
 ---
 
 - 프로젝트 목표
-  - C언어를 이용한 프로그램을 작성하고 Mysql과 연동하여 데이터를 저장하고 읽는 방법을 익힌다.
-  - Atmega128을 이용한 프로젝트를 수행하거나 raspberry pico2w를 이용한 프로젝트를 수행한다.[키트 링크]()
+  - C언어를 이용한 프로그램을 작성하고 MQTT를 이용하여 데이터를 송수신하는 방법을 익힌다.
+  - Atmega128을 이용한 프로젝트를 수행하거나 raspberry pico2w를 이용한 프로젝트를 수행한다.
+  - [키트 링크](https://icfactory.co.kr/product/%EB%9D%BC%EC%A6%88%EB%B2%A0%EB%A6%AC%ED%8C%8C%EC%9D%B4-%ED%94%BC%EC%BD%942w-%EC%96%BC%ED%8B%B0%EB%B0%8B-%EC%8A%A4%ED%83%80%ED%84%B0-%ED%82%A4%ED%8A%B8/1629/)
+  - [샘플 코드](https://docs.sunfounder.com/projects/pico-2w-kit/en/latest/index.html)
 - 프로젝트 깃링크
-  - [1조](https://github.com/example/group1)
-  - [2조](https://github.com/example/group2)
-  - [3조](https://github.com/example/group3)
+  - [1조](https://github.com/tkdtn412/fitness-pico)
+  - [2조](https://github.com/Gwiin/hrd_first_project)
+  - [3조](https://github.com/Segangs/PicoTeam2)
