@@ -12,7 +12,7 @@ static char board[7][50] = {
 
 void initScore(Score * player, const char name[])
 {
-    strcpy(player->name, name);
+    snprintf(player->name, sizeof(player->name), "%s", name);
     for (int i = 0; i < 12;++i){
         for (int j = 0; j < 3;j++){
             player->score[i][j] = 0;
@@ -168,7 +168,7 @@ void setScore(int frame, int bow, Score *player)
 void setFrameScore(int frame, Score *player)
 {
     char buf[4];
-    sprintf(buf, "%3d", player->frameScore[frame]);
+    snprintf(buf, sizeof(buf), "%3d", player->frameScore[frame]);
     strncpy(board[5] + (frame - 1) * 4 + 1, buf, 3);
 }
 void calScore(int *frameScore, const int (*score)[3])

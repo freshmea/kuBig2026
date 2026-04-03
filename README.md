@@ -73,6 +73,8 @@
   - [샘플 코드](https://docs.sunfounder.com/projects/pico-2w-kit/en/latest/index.html)
 - 프로젝트 준비 문서
   - [첫 프로젝트 제한 사항](doc/첫 프로젝트.md)
+  - [프로젝트 제안서 템플릿](doc/프로젝트_제안서_템플릿.md)
+  - [프로젝트 마일스톤 체크리스트](doc/프로젝트_마일스톤_체크리스트.md)
   - [실습 제출 템플릿](doc/실습_제출_템플릿.md)
   - [프로젝트 평가 루브릭](doc/프로젝트_평가_루브릭.md)
   - [MQTT 예제 안내](network/README.md)
