@@ -14,6 +14,7 @@
 
 - [온보딩 체크리스트](doc/온보딩_체크리스트.md)
 - [1주차 수업 운영안](doc/1주차_수업운영안.md)
+- [C 실습 맵](doc/C_실습_맵.md)
 - [문제 해결 가이드](doc/문제해결_가이드.md)
 - [프로젝트 평가 루브릭](doc/프로젝트_평가_루브릭.md)
 
@@ -29,6 +30,8 @@
 - 추천 학습 순서
   - [온보딩 체크리스트](doc/온보딩_체크리스트.md)
   - [1주차 수업 운영안](doc/1주차_수업운영안.md)
+  - [C 실습 맵](doc/C_실습_맵.md)
+  - [C 예제 인덱스](c_example/README.md)
   - [표준 입출력 함수 정리](doc/표준 입출력 함수 정리.md)
 - [과정 진행 사항](doc/c_programming.md)
 - [C 언어 시험 링크](https://forms.gle/fgCp9ZdNhPGGpKwJ6)
@@ -61,6 +64,7 @@
   - [샘플 코드](https://docs.sunfounder.com/projects/pico-2w-kit/en/latest/index.html)
 - 프로젝트 준비 문서
   - [첫 프로젝트 제한 사항](doc/첫 프로젝트.md)
+  - [실습 제출 템플릿](doc/실습_제출_템플릿.md)
   - [프로젝트 평가 루브릭](doc/프로젝트_평가_루브릭.md)
 - 프로젝트 깃링크
   - [1조](https://github.com/tkdtn412/fitness-pico)
