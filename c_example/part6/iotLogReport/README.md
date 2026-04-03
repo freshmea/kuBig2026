@@ -17,6 +17,18 @@ sensorA 24.5 45.0 78
 sensorB 31.2 68.0 52
 ```
 
+## 실행 방법
+
+프로젝트 루트에서 CMake로 빌드한 뒤 예제 실행 파일을 이 폴더 기준으로 실행한다.
+
+```bash
+cmake -S . -B build
+cmake --build build --target iotLogReport
+cd c_example/part6/iotLogReport
+../../../build/c_example/part6/iotLogReport/iotLogReport
+cat report.out
+```
+
 ## 학습 포인트
 
 - 파일 전체 레코드 수 세기
@@ -24,6 +36,7 @@ sensorB 31.2 68.0 52
 - 조건에 따라 경고 횟수 계산
 - 포인터 배열을 사용해 위험 순서로 정렬
 - 분석 결과를 리포트 파일로 저장
+- 상대 경로와 작업 디렉터리의 차이 이해
 
 ## 확장 과제
 

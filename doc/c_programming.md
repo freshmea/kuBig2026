@@ -30,6 +30,7 @@ git config --global user.name freshmea
 - limit 프로그램 작성 - int, char, float, double, long double, long long, unsigned int, unsigned long long
 - 과제 : [마크다운 정리UTUBE](https://www.youtube.com/watch?v=kMEb_BzyUqk) [마크다운 블로그](https://www.heropy.dev/p/B74sNE)
 - 과제 : mermaid 로 그래프 그리기 해보기
+- 성과 기준 : WSL 환경에서 C 파일을 만들고 컴파일한 뒤 실행 결과를 설명할 수 있어야 한다.
 
 ---
 
@@ -46,6 +47,7 @@ git config --global user.name freshmea
 - 7교시: 비트연산, fourbit, fourbit2, genderRatio
 - 8교시: 대소문자 구분, 알파벳 구분
 - 과제 : [make 문법](https://code-lab1.tistory.com/370), [vscode 단축키](https://inpa.tistory.com/entry/VS-Code-%E2%8F%B1%EF%B8%8F-%EC%9C%A0%EC%9A%A9%ED%95%9C-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%A0%95%EB%A6%AC)
+- 성과 기준 : 조건식과 연산자 우선순위를 사용해 간단한 판정 프로그램을 직접 작성할 수 있어야 한다.
 
 ---
 
@@ -62,6 +64,7 @@ git config --global user.name freshmea
 - 7교시: 배열 연습 , lotto, dice2
 - 8교시: 배열 연습 , sumArray, findmax, sumMatrix
 - 과제 : 없음
+- 성과 기준 : 반복문과 배열을 조합해 누적 계산과 탐색 문제를 해결할 수 있어야 한다.
 
 ---
 
@@ -78,6 +81,7 @@ git config --global user.name freshmea
 - 7교시: void 포인터
 - 8교시: 포인터와 배열, 함수로 배열 넘기기 arraycompare
 - 과제 : 없음
+- 성과 기준 : 함수 호출과 포인터 전달 방식의 차이를 설명하고 정렬 예제를 수정할 수 있어야 한다.
 
 ---
 
@@ -94,6 +98,7 @@ git config --global user.name freshmea
 - 7교시: baseball 게임 만들기 - 실습
 - 8교시: baseball 게임 만들기 - 실습
 - 과제 : [cmake 사용법](https://nx006.tistory.com/36), [cmake 할때 쪼오오금 도움이 되는 문서](https://gist.github.com/luncliff/6e2d4eb7ca29a0afd5b592f72b80cb5c?permalink_comment_id=3300758)
+- 성과 기준 : 여러 소스 파일을 빌드에 연결하고 CMake 타깃 구조를 읽을 수 있어야 한다.
 
 ---
 
@@ -110,6 +115,7 @@ git config --global user.name freshmea
 - 7교시: string.h 라이브러리 함수 설명(strlen, strcpy, strncpy, strcat, strcmp)
 - 8교시: 표준입출력함수(getchar, putchar, gets, puts, scanf, printf)과 파일 입출력 함수(getc, putc, fgets, fputs, fscanf, fprintf) 정리
 - 과제 : 없음
+- 성과 기준 : 구조체와 표준 입출력 함수를 사용해 데이터를 묶어 표현할 수 있어야 한다.
 
 ---
 
@@ -126,6 +132,7 @@ git config --global user.name freshmea
 - 7교시: scoreProcess 예제 설명
 - 8교시: scoreProcess 예제 실습
 - 과제 : scoreProcess 의 데이터 수를 파일 읽을 때 얻어와서 자동으로 실행하게 만들기
+- 성과 기준 : 파일에서 데이터를 읽어 구조체 배열에 저장하고 동적 메모리 할당의 필요성을 설명할 수 있어야 한다.
 
 ---
 
@@ -142,6 +149,7 @@ git config --global user.name freshmea
 - 7교시: 스택 - 동적할당 예제 stack3
 - 8교시: 스택 - 동적할당 예제 stack3 2
 - 과제 : 없음
+- 성과 기준 : 전역 변수 중심 예제를 구조체 기반 자료구조로 바꿀 수 있어야 한다.
 
 ---
 
@@ -158,6 +166,7 @@ git config --global user.name freshmea
 - 7교시: Queue3 실습
 - 8교시: Queue3 실습
 - 과제 : 없음
+- 성과 기준 : 자료구조 예제와 MQTT 예제의 역할 차이를 이해하고 둘 다 빌드 흐름을 따라갈 수 있어야 한다.
 
 ---
 
@@ -174,3 +183,4 @@ git config --global user.name freshmea
 - 7교시: 시험
 - 8교시: 시험 문제 풀이
 - 과제 : 없음
+- 성과 기준 : 볼링 프로젝트에서 함수 분리, 배열 처리, 조건 분기를 활용한 구현 흐름을 설명할 수 있어야 한다.

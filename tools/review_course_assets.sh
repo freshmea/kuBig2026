@@ -16,6 +16,30 @@ command_exists() {
     command -v "$1" >/dev/null 2>&1
 }
 
+paperclip_health_check() {
+    if command_exists curl; then
+        curl -fsS http://127.0.0.1:3100/api/health >/dev/null 2>&1
+        return
+    fi
+
+    if command_exists python3; then
+        python3 - <<'PY' >/dev/null 2>&1
+import sys
+import urllib.request
+
+try:
+    with urllib.request.urlopen("http://127.0.0.1:3100/api/health", timeout=5) as response:
+        if response.status != 200:
+            raise RuntimeError(f"unexpected status: {response.status}")
+except Exception:
+    sys.exit(1)
+PY
+        return
+    fi
+
+    return 127
+}
+
 pass() {
     PASS_COUNT=$((PASS_COUNT + 1))
     printf -- "- PASS: %s\n" "$1" >> "$REPORT_FILE"
@@ -153,14 +177,17 @@ syntax_check_collection() {
     printf '## Paperclip\n'
 } > "$REPORT_FILE"
 
-if command_exists curl; then
-    if curl -fsS http://127.0.0.1:3100/api/health >/dev/null 2>&1; then
-        pass "Paperclip API is reachable at http://127.0.0.1:3100/api/health."
-    else
-        warn "Paperclip API is not reachable. Start 'Paperclip: Start Local Server' for orchestrated runs."
-    fi
+if paperclip_health_check; then
+    pass "Paperclip API is reachable at http://127.0.0.1:3100/api/health."
 else
-    warn "Paperclip API check skipped because 'curl' is not installed in this runtime."
+    case $? in
+        127)
+            warn "Paperclip API check skipped because neither 'curl' nor 'python3' is installed in this runtime."
+            ;;
+        *)
+            warn "Paperclip API is not reachable. Start 'Paperclip: Start Local Server' for orchestrated runs."
+            ;;
+    esac
 fi
 
 printf '\n## Documentation Checks\n' >> "$REPORT_FILE"
