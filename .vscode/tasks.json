@@ -1,6 +1,43 @@
 {
     "tasks": [
         {
+            "label": "Paperclip: Start Local Server",
+            "type": "shell",
+            "command": "${workspaceFolder}/tools/paperclip.sh",
+            "args": [
+                "run",
+                "--config",
+                "${workspaceFolder}/.paperclip/config.json",
+                "--data-dir",
+                "${workspaceFolder}/.paperclip-data"
+            ],
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            }
+        },
+        {
+            "label": "Review: Education Materials And Sources",
+            "type": "shell",
+            "command": "${workspaceFolder}/tools/review_course_assets.sh",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Review: Start Paperclip And Run Review",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Paperclip: Start Local Server",
+                "Review: Education Materials And Sources"
+            ],
+            "problemMatcher": []
+        },
+        {
             "type": "cppbuild",
             "label": "C/C++: gcc 활성 파일 빌드",
             "command": "/usr/bin/gcc",

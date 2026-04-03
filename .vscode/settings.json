@@ -52,5 +52,19 @@
         "/home/aa/kuBig2026/build/pico-build/generated/**",
         "/usr/include/**"
     ],
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "files.exclude": {
+        "**/.paperclip": true,
+        "**/.paperclip-data": true,
+        "**/review-reports": true
+    },
+    "search.exclude": {
+        "**/.paperclip": true,
+        "**/.paperclip-data": true,
+        "**/review-reports": true
+    },
+    "files.watcherExclude": {
+        "**/.paperclip-data/**": true,
+        "**/review-reports/**": true
+    }
 }

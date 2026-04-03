@@ -1,2 +1,5 @@
 browse.*
 build/
+.paperclip/
+.paperclip-data/
+review-reports/

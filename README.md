@@ -18,6 +18,7 @@
   - VsCode 를 활용하는 기술을 익히고 디버깅 방법을 익힌다.
   - 최종 프로젝트 - 볼링 게임
 - [과정 진행 사항](doc/c_programming.md)
+- [교육 운영 프레임워크](doc/교육 운영 프레임워크.md)
 - [C 언어 시험 링크](https://forms.gle/fgCp9ZdNhPGGpKwJ6)
 
 ---
