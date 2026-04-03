@@ -15,11 +15,13 @@
 - 저장소 clone 후 `git submodule update --init --recursive` 를 먼저 실행한다.
 - 호스트 예제 빌드에는 `cmake`, `gcc` 가 필요하다.
 - Pico 실습에는 `gcc-arm-none-eabi`, `libnewlib-arm-none-eabi`, `libstdc++-arm-none-eabi-newlib` 가 추가로 필요하다.
+- 호스트 예제만 확인할 때는 `cmake -S . -B build -DKUBIG_BUILD_ATMEGA128=OFF -DKUBIG_BUILD_PICO=OFF` 로 임베디드 외부 프로젝트를 제외할 수 있다.
 - [온보딩 체크리스트](doc/온보딩_체크리스트.md)
 - [1주차 수업 운영안](doc/1주차_수업운영안.md)
 - [C 실습 맵](doc/C_실습_맵.md)
 - [문제 해결 가이드](doc/문제해결_가이드.md)
 - [프로젝트 평가 루브릭](doc/프로젝트_평가_루브릭.md)
+- [실습지 모음](doc/실습지_모음.md)
 
 ## C 언어
 

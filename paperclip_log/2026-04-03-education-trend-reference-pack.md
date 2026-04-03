@@ -173,14 +173,14 @@
 
 ## 참고 링크
 
-- WEF: https://www.weforum.org/reports/the-future-of-jobs-report-2025/
-- OECD: https://www.oecd.org/en/publications/education-policy-outlook-2025_c3f402ba-en.html
-- GitHub Octoverse 2025: https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/
-- Stack Overflow Developer Survey 2025: https://survey.stackoverflow.co/2025/
-- GitLab Remote Onboarding: https://handbook.gitlab.com/handbook/company/culture/all-remote/onboarding/
-- GitLab Onboarding Buddies: https://handbook.gitlab.com/handbook/people-group/general-onboarding/onboarding-buddies/
-- 42 Paris Piscine: https://42.fr/en/admissions/42-piscine/
-- 42 Seoul 소개: https://42seoul.kr/en/innovation_academy/business_info/seoul42.html
-- 42 Seoul Training Guide: https://42seoul.kr/en/seoul42/studies/studies_info.html
-- CodePath Courses: https://www.codepath.org/courses
-- CodePath 2024 Annual Report: https://www.codepath.org/hubfs/Financials/2024%20Annual%20Report.pdf?hsLang=en
+- [WEF](https://www.weforum.org/reports/the-future-of-jobs-report-2025/)
+- [OECD](https://www.oecd.org/en/publications/education-policy-outlook-2025_c3f402ba-en.html)
+- [GitHub Octoverse 2025](https://github.blog/news-insights/octoverse/octoverse-a-new-developer-joins-github-every-second-as-ai-leads-typescript-to-1/)
+- [Stack Overflow Developer Survey 2025](https://survey.stackoverflow.co/2025/)
+- [GitLab Remote Onboarding](https://handbook.gitlab.com/handbook/company/culture/all-remote/onboarding/)
+- [GitLab Onboarding Buddies](https://handbook.gitlab.com/handbook/people-group/general-onboarding/onboarding-buddies/)
+- [42 Paris Piscine](https://42.fr/en/admissions/42-piscine/)
+- [42 Seoul 소개](https://42seoul.kr/en/innovation_academy/business_info/seoul42.html)
+- [42 Seoul Training Guide](https://42seoul.kr/en/seoul42/studies/studies_info.html)
+- [CodePath Courses](https://www.codepath.org/courses)
+- [CodePath 2024 Annual Report](https://www.codepath.org/hubfs/Financials/2024%20Annual%20Report.pdf?hsLang=en)
