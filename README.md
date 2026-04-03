@@ -12,6 +12,9 @@
 
 ---
 
+- 저장소 clone 후 `git submodule update --init --recursive` 를 먼저 실행한다.
+- 호스트 예제 빌드에는 `cmake`, `gcc` 가 필요하다.
+- Pico 실습에는 `gcc-arm-none-eabi`, `libnewlib-arm-none-eabi`, `libstdc++-arm-none-eabi-newlib` 가 추가로 필요하다.
 - [온보딩 체크리스트](doc/온보딩_체크리스트.md)
 - [1주차 수업 운영안](doc/1주차_수업운영안.md)
 - [C 실습 맵](doc/C_실습_맵.md)
@@ -49,6 +52,7 @@
 - 추천 학습 순서
   - [문제 해결 가이드](doc/문제해결_가이드.md)
   - [과정 진행 사항](doc/atmega128.md)
+  - [Atmega128 예제 인덱스](atmega128/README.md)
 - [Atmega128 시험 링크](https://forms.gle/oJrCYyPsPQ7hWCce6)
 
 ---
@@ -66,6 +70,7 @@
   - [첫 프로젝트 제한 사항](doc/첫 프로젝트.md)
   - [실습 제출 템플릿](doc/실습_제출_템플릿.md)
   - [프로젝트 평가 루브릭](doc/프로젝트_평가_루브릭.md)
+  - [MQTT 예제 안내](network/README.md)
 - 프로젝트 깃링크
   - [1조](https://github.com/tkdtn412/fitness-pico)
   - [2조](https://github.com/Gwiin/hrd_first_project)
