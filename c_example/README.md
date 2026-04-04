@@ -18,6 +18,7 @@
 - `part3/swap.c`
 - `part4/baseballGame`
 - `part5/structArray.c`
+- `part6/README.md`
 - `part6/scoreProcess`
 - `part6/iotLogReport`
 
@@ -33,5 +34,6 @@
 - [실습 제출 템플릿](../doc/실습_제출_템플릿.md)
 - [자료구조 예제 인덱스](../ds/README.md)
 - [숫자 야구 실습지](part4/baseballGame/실습지.md)
+- [part6 파일 처리 실습지](part6/실습지.md)
 - [성적 처리 실습지](part6/scoreProcess/실습지.md)
 - [IoT 로그 분석 실습지](part6/iotLogReport/실습지.md)

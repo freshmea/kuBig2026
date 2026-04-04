@@ -31,3 +31,4 @@
 
 - [Atmega128 진행사항](../doc/atmega128.md)
 - [문제 해결 가이드](../doc/문제해결_가이드.md)
+- [Atmega128 GPIO/UART 실습지](실습지.md)

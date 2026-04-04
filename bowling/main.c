@@ -9,4 +9,5 @@ int main(void)
         playGame(&player1, i);
     }
     playGame10Frame(&player1);
+    return 0;
 }

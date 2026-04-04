@@ -21,6 +21,7 @@
 - [2주차 수업 운영안](doc/2주차_수업운영안.md)
 - [C 실습 맵](doc/C_실습_맵.md)
 - [문제 해결 가이드](doc/문제해결_가이드.md)
+- [학습 자가진단표](doc/학습_자가진단표.md)
 - [프로젝트 평가 루브릭](doc/프로젝트_평가_루브릭.md)
 - [실습지 모음](doc/실습지_모음.md)
 - [강사용 수업 준비 체크리스트](doc/강사용_수업준비_체크리스트.md)
@@ -84,3 +85,12 @@
   - [1조](https://github.com/tkdtn412/fitness-pico)
   - [2조](https://github.com/Gwiin/hrd_first_project)
   - [3조](https://github.com/Segangs/PicoTeam2)
+
+---
+
+## Bowling Mini Project
+
+---
+
+- [볼링 프로젝트 안내](bowling/README.md)
+- [볼링 규칙](bowling/볼링 규칙.md)
