@@ -2,6 +2,12 @@
 
 이 문서는 `network/mqttPub.c` 예제를 수업에서 어떻게 사용할지 설명한다.
 
+## 필수 라이브러리
+
+- 이 예제는 Eclipse Paho C 클라이언트(`paho-mqtt3c`)를 사용합니다.
+- Ubuntu 및 Debian 계열에서는 `libpaho-mqtt3c-dev` 패키지를 설치하면 라이브러리가 `/usr/lib`에 배치됩니다.
+- `network/CMakeLists.txt`가 라이브러리를 찾지 못하면 CMake 구성이 실패하므로, 미리 패키지를 설치하여 `sudo apt install libpaho-mqtt3c-dev` 를 실행하세요.
+
 ## 학습 목표
 
 - MQTT broker 주소와 topic 개념을 이해한다.
