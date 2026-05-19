@@ -1,0 +1,9 @@
+[project]
+name = "desktop-clock-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pywebview>=6.2.1",
+]

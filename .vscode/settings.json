@@ -1,5 +1,6 @@
 {
     "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/PyWebView/.venv/Lib/site-packages",
         "/home/aa/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages",
         "/home/aa/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages",
         "/home/aa/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages",
@@ -22,6 +23,7 @@
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
     ],
     "python.analysis.extraPaths": [
+        "${workspaceFolder}/PyWebView/.venv/Lib/site-packages",
         "/home/aa/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.10/site-packages",
         "/home/aa/turtlebot3_ws/install/turtlebot3_example/lib/python3.10/site-packages",
         "/home/aa/turtlebot3_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages",
