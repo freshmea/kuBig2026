@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Settings Store</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="panel">
+        <h1>사용자 설정</h1>
+        <label>테마
+            <select id="theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </label>
+        <label>글자 크기
+            <input id="fontSize" type="range" min="14" max="28" step="1" />
+        </label>
+        <label>마지막 카운터 값
+            <input id="lastCount" type="number" />
+        </label>
+        <button id="save" type="button">설정 저장</button>
+        <p id="preview" class="preview">설정 미리보기</p>
+        <p id="status" class="status"></p>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

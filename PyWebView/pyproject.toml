@@ -1,9 +1,9 @@
 [project]
-name = "desktop-clock-app"
+name = "pywebview-class-demos"
 version = "0.1.0"
-description = "Add your description here"
+description = "PyWebView classroom demos for Python-focused desktop app lessons"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.13"
 dependencies = [
     "pywebview>=6.2.1",
 ]

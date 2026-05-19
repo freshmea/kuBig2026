@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import json
 import socket
 from datetime import datetime
@@ -10,6 +8,7 @@ from threading import Thread
 from urllib.parse import urlparse
 
 WEEKDAYS = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"]
+type ClockPayload = dict[str, str]
 
 
 class ClockApiServer:
@@ -26,7 +25,7 @@ class ClockApiServer:
             return int(sock.getsockname()[1])
 
     @staticmethod
-    def _clock_payload() -> dict[str, str]:
+    def _clock_payload() -> ClockPayload:
         now = datetime.now()
         date_text = f"{now.year}년 {now.month}월 {now.day}일 {WEEKDAYS[now.weekday()]}"
         return {
@@ -41,16 +40,19 @@ class ClockApiServer:
             def __init__(self, *args, **kwargs):
                 super().__init__(*args, directory=str(frontend_dir), **kwargs)
 
+            def _send_json(self, payload: ClockPayload) -> None:
+                body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+                self.send_response(HTTPStatus.OK)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Cache-Control", "no-store")
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+
             def do_GET(self) -> None:
                 path = urlparse(self.path).path
                 if path == "/api/clock":
-                    body = json.dumps(ClockApiServer._clock_payload(), ensure_ascii=False).encode("utf-8")
-                    self.send_response(HTTPStatus.OK)
-                    self.send_header("Content-Type", "application/json; charset=utf-8")
-                    self.send_header("Cache-Control", "no-store")
-                    self.send_header("Content-Length", str(len(body)))
-                    self.end_headers()
-                    self.wfile.write(body)
+                    self._send_json(ClockApiServer._clock_payload())
                     return
 
                 if path == "/":

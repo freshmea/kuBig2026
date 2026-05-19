@@ -11,7 +11,7 @@
 
 - 대상: Python 기초 문법, HTML/CSS/JavaScript 기초, fetch API를 간단히 배운 학습자
 - 준비:
-  - Python 3.9+
+  - Python 3.13
   - uv
   - 프로젝트 폴더: PyWebView
   - 이전 실습: `timer` 예제의 로컬 서버 + 프론트엔드 분리 구조
@@ -241,7 +241,7 @@ counterEvents.addEventListener('message', (event) => {
 서버는 값이 바뀔 때 연결된 모든 창에 새 값을 보낸다.
 
 ```python
-def _broadcast_counter(self, payload: dict[str, int]) -> None:
+def _broadcast_counter(self, payload: CounterPayload) -> None:
     for client_queue in list(self._event_clients):
         client_queue.put(payload)
 ```

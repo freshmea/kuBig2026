@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; font-family: "Segoe UI", "Malgun Gothic", sans-serif; background: #f9fafb; color: #111827; }
+.panel { width: min(92vw, 580px); margin: 34px auto; }
+h1 { margin: 0 0 20px; font-size: 1.4rem; }
+dl { display: grid; grid-template-columns: 120px 1fr; gap: 8px 12px; padding: 16px; border-radius: 8px; background: white; border: 1px solid #e5e7eb; }
+dt { font-weight: 700; color: #374151; }
+dd { margin: 0; overflow-wrap: anywhere; color: #4b5563; }
+pre { padding: 14px; border-radius: 8px; background: #111827; color: #e5e7eb; overflow-x: auto; }

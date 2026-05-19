@@ -1,0 +1,8 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; font-family: "Segoe UI", "Malgun Gothic", sans-serif; background: #f0fdf4; color: #14532d; }
+.app { width: min(92vw, 500px); margin: 36px auto; }
+nav { display: flex; gap: 8px; margin-bottom: 18px; }
+button { min-height: 42px; border: 0; border-radius: 8px; background: #15803d; color: white; padding: 0 16px; cursor: pointer; }
+section { min-height: 220px; padding: 22px; border: 1px solid #bbf7d0; border-radius: 8px; background: white; }
+h1 { margin: 0 0 10px; font-size: 1.4rem; }
+p { margin: 0; line-height: 1.6; }

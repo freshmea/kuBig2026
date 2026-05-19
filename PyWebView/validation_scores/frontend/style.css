@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", "Malgun Gothic", sans-serif;
+    background: #f8fafc;
+    color: #172033;
+}
+.panel {
+    width: min(92vw, 420px);
+    margin: 38px auto;
+    display: grid;
+    gap: 14px;
+}
+h1 { margin: 0; font-size: 1.4rem; }
+label { display: grid; gap: 6px; font-weight: 600; }
+input, button {
+    min-height: 44px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    padding: 0 12px;
+}
+button { border: 0; background: #0891b2; color: white; cursor: pointer; }
+.result { min-height: 70px; padding: 14px; border-radius: 8px; background: white; }
+.result p { margin: 0 0 8px; }
+.error { border: 1px solid #fecaca; color: #b91c1c; }
+.ok { border: 1px solid #bbf7d0; color: #166534; }

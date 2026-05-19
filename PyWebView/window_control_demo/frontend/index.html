@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Window Control</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="panel">
+        <h1>창 제어</h1>
+        <div class="grid">
+            <button data-action="resize_small" type="button">작게</button>
+            <button data-action="resize_large" type="button">크게</button>
+            <button data-action="toggle_fullscreen" type="button">전체화면</button>
+            <button data-action="confirm_close" type="button">확인창</button>
+            <button data-action="open_child_window" type="button">새 창</button>
+        </div>
+        <p id="status">대기 중</p>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

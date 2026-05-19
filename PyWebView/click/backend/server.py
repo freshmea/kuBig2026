@@ -1,16 +1,15 @@
-from __future__ import annotations
-
 import json
 import queue
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from threading import Lock, Thread
-from typing import Optional
 from urllib import error, request
 from urllib.parse import urlparse
 
 COUNTER_PORT = 49321
+type CounterPayload = dict[str, int]
+type CounterEventQueue = queue.Queue[CounterPayload]
 
 
 class CounterHttpServer(ThreadingHTTPServer):
@@ -23,42 +22,42 @@ class CounterApiServer:
         self.port = COUNTER_PORT
         self._count = 0
         self._lock = Lock()
-        self._event_clients: list[queue.Queue[dict[str, int]]] = []
-        self._server: Optional[ThreadingHTTPServer] = None
-        self._thread: Optional[Thread] = None
+        self._event_clients: list[CounterEventQueue] = []
+        self._server: ThreadingHTTPServer | None = None
+        self._thread: Thread | None = None
         self._owns_server = False
 
-    def _counter_payload(self) -> dict[str, int]:
+    def _counter_payload(self) -> CounterPayload:
         with self._lock:
             return {"count": self._count}
 
-    def _increase_payload(self) -> dict[str, int]:
+    def _increase_payload(self) -> CounterPayload:
         with self._lock:
             self._count += 1
             payload = {"count": self._count}
             self._broadcast_counter(payload)
             return payload
 
-    def _decrease_payload(self) -> dict[str, int]:
+    def _decrease_payload(self) -> CounterPayload:
         with self._lock:
             self._count -= 1
             payload = {"count": self._count}
             self._broadcast_counter(payload)
             return payload
 
-    def _add_event_client(self) -> queue.Queue[dict[str, int]]:
-        client_queue: queue.Queue[dict[str, int]] = queue.Queue()
+    def _add_event_client(self) -> CounterEventQueue:
+        client_queue: CounterEventQueue = queue.Queue()
         with self._lock:
             self._event_clients.append(client_queue)
             client_queue.put({"count": self._count})
         return client_queue
 
-    def _remove_event_client(self, client_queue: queue.Queue[dict[str, int]]) -> None:
+    def _remove_event_client(self, client_queue: CounterEventQueue) -> None:
         with self._lock:
             if client_queue in self._event_clients:
                 self._event_clients.remove(client_queue)
 
-    def _broadcast_counter(self, payload: dict[str, int]) -> None:
+    def _broadcast_counter(self, payload: CounterPayload) -> None:
         for client_queue in list(self._event_clients):
             client_queue.put(payload)
 
@@ -70,7 +69,7 @@ class CounterApiServer:
             def __init__(self, *args, **kwargs):
                 super().__init__(*args, directory=str(frontend_dir), **kwargs)
 
-            def _send_json(self, payload: dict[str, int]) -> None:
+            def _send_json(self, payload: CounterPayload) -> None:
                 body = json.dumps(payload).encode("utf-8")
                 self.send_response(HTTPStatus.OK)
                 self.send_header("Content-Type", "application/json; charset=utf-8")
@@ -79,7 +78,7 @@ class CounterApiServer:
                 self.end_headers()
                 self.wfile.write(body)
 
-            def _send_event(self, payload: dict[str, int]) -> None:
+            def _send_event(self, payload: CounterPayload) -> None:
                 body = f"data: {json.dumps(payload)}\n\n".encode("utf-8")
                 self.wfile.write(body)
                 self.wfile.flush()
