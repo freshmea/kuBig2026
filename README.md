@@ -6,6 +6,9 @@
 
 [교육생 슬라이드](https://docs.google.com/presentation/d/1igQGshYUiAKx2f91brdvskaBBEhlvog_YM9Dt9nse1I/edit?usp=sharing)
 
+- ABC 프로젝트 멘토링 신청 링크 :
+[사전직무교육 신청]
+(https://abcbootcamp.kr/abc_education/abc_education_detail/EDUA_000000104/)
 ---
 
 ## 빠른 시작
