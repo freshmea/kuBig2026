@@ -6,6 +6,9 @@ def main():
     print(str_var[2])
     print(str_var[3])
     print(str_var[4])
+    # str_var[5] = "여" <- 안됨
+    # str_var = str_var.replace("요", "여")
+    # str_var = "안녕하세요"[:5] + "여"
 
     for c in str_var:
         print("for 로 불러온 원소", c)
