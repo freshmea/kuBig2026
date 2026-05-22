@@ -6,25 +6,23 @@
 
 ---
 
-- 1교시: wsl2 설치
+- 1교시: wsl2 설치, python 개요, 가상환경 설명
 - 2교시: python 설치
-- 3교시: 변수, 타입
-- 4교시:
-- 5교시:
-- 6교시:
-- 7교시:
-- 8교시:
-- 과제 :
-- 성과
+- 3교시: 변수, 타입, python 인터프리터 사용법
+- 4교시: print 함수 해석
+- 5교시: 일경험 관련 처리
+- 6교시: string 타입과 문자열 포매팅
+- 7교시: 비교문 논리 연산자 설명
+- 8교시: for 문, range 함수, enumerate 함수
 
 ---
 
-## 2026-3-11
+## 2026-5-22
 
 ---
 
-- 1교시: 흐름제어 - 조건문
-- 2교시: if ~ else 문, switch 문(passFail, passFail2, posZeroNeg, scoreGrade, scoreGradeSwitch), random(dice)
+- 1교시:
+- 2교시:
 - 3교시: for 문(one2Ten, one2TenSum, a2bSum)
 - 4교시: while 문 do~ while 문
 - 5교시: 구구단, star 예제
