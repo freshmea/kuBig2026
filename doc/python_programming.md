@@ -26,7 +26,7 @@
 - 3교시: list 설명, list 예제
 - 4교시: list method 설명, list method 예제
 - 5교시: practice 문제 1~10 연습
-- 6교시:
+- 6교시: module, package 설명, import 문법 설명
 - 7교시:
 - 8교시:
 - 과제 : 프로그래머스 python 문제 풀어 보기
