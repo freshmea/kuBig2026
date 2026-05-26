@@ -34,7 +34,7 @@ class Student:
     def __mul__(self, other):
         return self.get_sum() * other.get_sum()
 
-    def __divmod__(self, other):
+    def __truediv__(self, other):
         return self.get_sum() / other.get_sum()
 
     # 관계 연산자 greater than -> gt , less than -> lt, equal -> eq, nagative ->ne
@@ -59,6 +59,10 @@ def main():
     ]
     print("student[0] > student[1]", students[0] > students[1])
     print("student[0] > student[1]", students[0] > 90)
+    print("student[0] + student[1]", students[0] + students[1])
+    print("student[0] - student[1]", students[0] - students[1])
+    print("student[0] * student[1]", students[0] * students[1])
+    print("student[0] / student[1]", students[0] / students[1])
 
 
 if __name__ == "__main__":
