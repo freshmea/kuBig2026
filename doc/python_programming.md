@@ -37,10 +37,10 @@
 
 ---
 
-- 1교시:
-- 2교시:
-- 3교시:
-- 4교시:
+- 1교시: class 설명
+- 2교시: class method 설명, special method 설명(dunder method)
+- 3교시: instance method 설명
+- 4교시: class 변수, property 설명
 - 5교시:
 - 6교시:
 - 7교시:
