@@ -22,7 +22,8 @@ def main():
     print("이름\t 국어\t 수학\t 영어\t 과학")
     for student in students:
         print(
-            f"{student.name}\t {student.korean}\t {student.math}\t {student.english}\t {student.science}"
+            f"{student.name}\t {student.korean}\t {student.math}\t\
+                {student.english}\t {student.science}"
         )
 
 

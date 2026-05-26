@@ -20,6 +20,32 @@ class Student:
         return f"{self.name}\t {self.korean}\t {self.math}\t {self.english}\t {self.science}\
             {self.get_sum()}\t {self.get_average()}"
 
+    def __str__(self) -> str:
+        return f"{self.name}\t {self.korean}\t {self.math}\t {self.english}\t {self.science}\
+            {self.get_sum()}\t {self.get_average()} str"
+
+    # 사칙연산 + - * /
+    def __add__(self, other):
+        return self.get_sum() + other.get_sum()
+
+    def __sub__(self, other):
+        return self.get_sum() - other.get_sum()
+
+    def __mul__(self, other):
+        return self.get_sum() * other.get_sum()
+
+    def __divmod__(self, other):
+        return self.get_sum() / other.get_sum()
+
+    # 관계 연산자 greater than -> gt , less than -> lt, equal -> eq, nagative ->ne
+    # grather than equal -> ge, less than equal ->le
+    def __gt__(self, value):
+        if isinstance(value, Student):
+            return self.get_sum() > value.get_sum()
+        else:
+            # raise
+            return "error"
+
 
 def main():
     students = [
@@ -31,13 +57,8 @@ def main():
         Student("efg", 64, 65, 55, 40),
         Student("dgd", 33, 25, 75, 93),
     ]
-    # print(students)
-    # print(students[0])
-    print("이름\t 국어\t 수학\t 영어\t 과학\t 총점\t 평균")
-    for student in students:
-        # print(student.to_string() + f"\t {student.get_sum()}\t" + f"{student.get_average()}")
-        print(student)
-    # print(students[0].__aa)
+    print("student[0] > student[1]", students[0] > students[1])
+    print("student[0] > student[1]", students[0] > 90)
 
 
 if __name__ == "__main__":
