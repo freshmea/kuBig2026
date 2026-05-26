@@ -13,7 +13,8 @@ class Child(Parent):
         super().__init__(value)
         print("Child 클래스의 __init__ 메소드가 호출 되었다.")
 
-    # 파이썬에서는 오버로딩이 없다. 오버라이딩만 된다. -> 특수한 overloading 데코레이터를사용하면 구현할 수는 있다.
+    # 파이썬에서는 오버로딩이 없다. 오버라이딩만 된다.
+    # -> 특수한 overloading 데코레이터를사용하면 구현할 수는 있다.
     def test(self, *args):
         print("Child 클래스의 test 메소드 입니다.")
 

@@ -41,7 +41,7 @@
 - 2교시: class method 설명, special method 설명(dunder method)
 - 3교시: instance method 설명
 - 4교시: class 변수, property 설명
-- 5교시:
+- 5교시: 상속과 다중 상속
 - 6교시:
 - 7교시:
 - 8교시:

@@ -26,7 +26,8 @@ class Student:
             {self.get_sum()}\t {self.get_average()}"
 
     def __str__(self) -> str:
-        return f"{self.name}\t {self.korean}\t {self.math}\t {self.english}\t {self.science}\t {self.get_sum()}\t {self.get_average()}"
+        return f"{self.name}\t {self.korean}\t {self.math}\t {self.english}\t \
+    {self.science}\t {self.get_sum()}\t {self.get_average()}"
 
     # 사칙연산 + - * /
     def __add__(self, other):
