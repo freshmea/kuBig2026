@@ -11,27 +11,43 @@ pyo3_hello/
   src/lib.rs
   rust_hello.pyi
   py.typed
-  use_rust_hello.py
 ```
 
 ## 빌드 준비
 
-```powershell
-pip install maturin
+```bash
+python3 -m pip install maturin
 ```
 
 Rust toolchain은 `rustup`으로 설치되어 있어야 합니다.
 
-## 빌드
+## 설치 방법 1: 현재 가상환경에 설치
 
-```powershell
-maturin develop -i /usr/bin/python3
+`maturin develop`은 현재 활성화된 virtual environment에만 설치합니다.
+
+```bash
+source /home/aa/.venv/bin/activate
+maturin develop
 ```
+
+이 방식은 VS Code 인터프리터도 같은 가상환경으로 맞춰야 `import rust_hello`가 정상 동작합니다.
+
+## 설치 방법 2: 특정 Python에 설치
+
+현재 사용 중인 `maturin 1.13.3`에서는 `maturin develop -i ...` 옵션을 지원하지 않습니다.
+특정 인터프리터를 지정하려면 wheel을 만든 뒤 그 Python으로 설치해야 합니다.
+
+```bash
+maturin build -i /usr/bin/python3
+/usr/bin/python3 -m pip install target/wheels/rust_hello-0.1.0-cp310-cp310-manylinux_2_34_x86_64.whl --force-reinstall
+```
+
+wheel 파일명은 Python 버전과 플랫폼에 따라 달라질 수 있습니다.
 
 ## 실행
 
-```powershell
-python use_rust_hello.py
+```bash
+/usr/bin/python3 /home/aa/kuBig2026/python_example/basic/a118_rust_binding.py
 ```
 
 ## 수업 포인트
