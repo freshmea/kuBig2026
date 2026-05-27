@@ -56,9 +56,9 @@
 - 2교시: native app(qt, tkinter, c#, gtk, .net), decorator, runtime_check decorator 작성
 - 3교시: generator 설명, lru_cache 설명, functools 설명
 - 4교시: iteration, SimpleIterator 설명(`__next__`, `__iter__`)
-- 5교시:
-- 6교시:
-- 7교시:
+- 5교시: threading, asyncio 설명
+- 6교시: C extension, Cpp extension 설명
+- 7교시: rust binding 설명, pyo3 예제 설명
 - 8교시:
 
 ---
