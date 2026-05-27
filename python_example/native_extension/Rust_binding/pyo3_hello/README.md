@@ -25,7 +25,7 @@ Rust toolchain은 `rustup`으로 설치되어 있어야 합니다.
 ## 빌드
 
 ```powershell
-maturin develop
+maturin develop -i /usr/bin/python3
 ```
 
 ## 실행

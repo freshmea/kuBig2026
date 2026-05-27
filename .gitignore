@@ -8,3 +8,4 @@ dxAxClass/
 __pycache__/
 *.egg-info/
 
+target/
