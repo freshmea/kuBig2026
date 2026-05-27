@@ -1,3 +1,5 @@
+# pyright: reportMissingImports=false
+
 from . import _hello_core
 
 
