@@ -68,5 +68,6 @@
     "files.watcherExclude": {
         "**/.paperclip-data/**": true,
         "**/review-reports/**": true
-    }
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:system"
 }
