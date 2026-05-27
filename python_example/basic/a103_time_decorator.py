@@ -8,7 +8,7 @@ def runtime_check(n):
         def wrapper(*args, **kwargs):
             print(f"{func.__name__}지금 부터 {n}번 실행 평균 표시")
             start_time = time.time()
-            for i in range(n):
+            for _ in range(n):
                 result = func(*args, **kwargs)
             end_time = time.time()
             print(f"평균 실행 시간은  {(end_time - start_time)/n:.3} 입니다.")
