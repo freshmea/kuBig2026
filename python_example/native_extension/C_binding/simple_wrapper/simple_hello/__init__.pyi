@@ -1,3 +1,11 @@
-from .hello import Hello, print_hello
+class Hello:
+	name: str
 
-__all__: list[str]
+	def __init__(self, name: str) -> None: ...
+	def greet(self) -> str: ...
+
+
+def print_hello() -> None: ...
+
+
+__all__ = ["Hello", "print_hello"]

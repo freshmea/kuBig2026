@@ -4,9 +4,9 @@
 
 static PyObject *make_greeting(PyObject *self, PyObject *args)
 {
-    const char *name;
+    const char *name = NULL;
 
-    if (!PyArg_ParseTuple(args, "choi", &name))
+    if (!PyArg_ParseTuple(args, "s", &name))
     {
         return NULL;
     }
