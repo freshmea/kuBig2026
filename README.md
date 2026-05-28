@@ -110,3 +110,4 @@
   - Python의 기본적인 문법과 라이브러리를 익히고 이를 이용한 프로젝트를 수행한다.
 - 추천 학습 순서
   - [수업 진행 사항](doc/python_programming.md)
+  - [Python 시험 링크](https://forms.gle/Ef8bU4GN4dZ39fqaA)

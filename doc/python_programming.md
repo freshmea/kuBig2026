@@ -72,6 +72,6 @@
 - 3교시: timer webview 예제 (backend, frontend 나누기, css, html, js 구조화, flask 구조화)
 - 4교시: click webview 예제(버튼 구현, 버튼 클릭 시 이벤트 처리)
 - 5교시: click webview 예제( SSE 구현)
-- 6교시:
-- 7교시:
-- 8교시:
+- 6교시: bridge_file_webview 예제(파일 입출력 구현)
+- 7교시: 교재 리뷰
+- 8교시: 시험
