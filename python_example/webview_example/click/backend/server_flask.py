@@ -1,22 +1,20 @@
+import json
+import queue
 import socket
 from datetime import datetime
 from pathlib import Path
 from threading import Lock, Thread
 
-from flask import Flask, send_from_directory
+from flask import Flask, Response, send_from_directory
 from werkzeug.serving import make_server
 
-
-def getFreePort():
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-        sock.bind(("127.0.0.1", 0))
-        return int(sock.getsockname()[1])
+FORT_NUMBER = 11722
 
 
 class CounterApiServer:
     def __init__(self, frontend_dir):
         self.frontend_dir = Path(frontend_dir).resolve()
-        self.port = getFreePort()
+        self.port = FORT_NUMBER
         self._count = 0
         self._lock = Lock()
         self._event_clients = []
@@ -34,15 +32,44 @@ class CounterApiServer:
     def _serve_index(self):
         return send_from_directory(self.frontend_dir, "index.html")
 
+    def _counter_payload(self):
+        with self._lock:
+            return {"count": self._count}
+
+    def _broadcast_counter(self, payload):
+        for client_queue in list(self._event_clients):
+            client_queue.put(payload)
+
     def _increase_payload(self):
-        self._count += 1
-        payload = {"count": self._count}
+        with self._lock:
+            self._count += 1
+            payload = {"count": self._count}
+        self._broadcast_counter(payload)
         return payload
 
     def _decrease_payload(self):
-        self._count -= 1
-        payload = {"count": self._count}
+        with self._lock:
+            self._count -= 1
+            payload = {"count": self._count}
+        self._broadcast_counter(payload)
         return payload
+
+    def _stream_counter_event(self):
+        client_queue = queue.Queue()
+        with self._lock:
+            self._event_clients.append(client_queue)
+            client_queue.put({"count": self._count})
+
+        def eventStream():
+            try:
+                while True:
+                    payload = client_queue.get()
+                    yield f"data: {json.dumps(payload)}\n\n"
+            finally:
+                with self._lock:
+                    if client_queue in self._event_clients:
+                        self._event_clients.remove(client_queue)
+        return Response(eventStream(), mimetype="text/event-stream")
 
     @property
     def base_url(self):
