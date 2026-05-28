@@ -67,11 +67,11 @@
 
 ---
 
-- 1교시:
-- 2교시:
-- 3교시:
-- 4교시:
-- 5교시:
+- 1교시: 복습
+- 2교시: webview 설치 및, wsl 에서 gtk 환경 설정
+- 3교시: timer webview 예제 (backend, frontend 나누기, css, html, js 구조화, flask 구조화)
+- 4교시: click webview 예제(버튼 구현, 버튼 클릭 시 이벤트 처리)
+- 5교시: click webview 예제( SSE 구현)
 - 6교시:
 - 7교시:
 - 8교시:
