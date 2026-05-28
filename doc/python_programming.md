@@ -59,7 +59,7 @@
 - 5교시: threading, asyncio 설명
 - 6교시: C extension, Cpp extension 설명
 - 7교시: rust binding 설명, pyo3 예제 설명
-- 8교시:
+- 8교시: exercise 예제 100 문제 실습
 
 ---
 
