@@ -27,8 +27,8 @@ def main():
         "파일 정보 확인",
         url=(FRONTEND_DIR / "index.html").as_uri(),
         js_api=FileListApi(),
-        width=420,
-        height=360,
+        width=520,
+        height=420,
         resizable=True,
     )
     webview.start()
