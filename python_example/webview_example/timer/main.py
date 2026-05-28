@@ -11,7 +11,7 @@ def main():
     server = ClockApiServer(FRONTED_DIR)
     server.start()
 
-    webview.create_window("Timer", url=server.base_url, width=460, height=320, resizable=True)
+    webview.create_window("탁상시계", url=server.base_url, width=460, height=320, resizable=True)
     webview.start()
 
 
