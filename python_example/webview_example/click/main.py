@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import webview
-from backend.server import CounterApiServer
+from backend.server_flask import CounterApiServer
 
 BASE_DIR = Path(__file__).resolve().parent
 FRONTED_DIR = BASE_DIR / "frontend"
