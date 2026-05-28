@@ -1,20 +1,40 @@
-const timeEl = document.getElementById('time');
-const dateEl = document.getElementById('date');
+const countEl = document.getElementById('count');
+const increaseButton = document.getElementById('increase');
+const decreaseButton = document.getElementById('decrease');
 
-async function refreshClock() {
-    try {
-        const response = await fetch('/api/clock', { cache: 'no-store' });
-        if (!response.ok) {
-            return;
-        }
-
-        const payload = await response.json();
-        timeEl.textContent = payload.time;
-        dateEl.textContent = payload.date;
-    } catch (error) {
-        // Network hiccups should not crash the demo UI.
-    }
+function renderCount(count) {
+    countEl.textContent = count;
 }
 
-refreshClock();
-setInterval(refreshClock, 1000);
+async function requestCounter(path, options = {}) {
+    const response = await fetch(path, {
+        cache: 'no-store',
+        ...options,
+    });
+
+    if (!response.ok) {
+        throw new Error(`Counter request failed: ${response.status}`);
+    }
+
+    const payload = await response.json();
+    renderCount(payload.count);
+}
+
+increaseButton.addEventListener('click', () => {
+    requestCounter('/api/counter/increase', { method: 'POST' });
+});
+
+decreaseButton.addEventListener('click', () => {
+    requestCounter('/api/counter/decrease', { method: 'POST' });
+});
+
+const counterEvents = new EventSource('/api/counter/events');
+
+counterEvents.addEventListener('message', (event) => {
+    const payload = JSON.parse(event.data);
+    renderCount(payload.count);
+});
+
+counterEvents.addEventListener('error', () => {
+    requestCounter('/api/counter');
+});
