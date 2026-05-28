@@ -8,10 +8,10 @@ FRONTED_DIR = BASE_DIR / "frontend"
 
 
 def main():
-    server = ClockApiServer(FRONTEND_DIR)
+    server = ClockApiServer(FRONTED_DIR)
     server.start()
 
-    webview.create_window("Timer", html="<h1>Hello Webview</h1>")
+    webview.create_window("Timer", url=server.base_url, width=460, height=320, resizable=True)
     webview.start()
 
 
