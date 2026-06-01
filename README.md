@@ -111,3 +111,18 @@
 - 추천 학습 순서
   - [수업 진행 사항](doc/python_programming.md)
   - [Python 시험 링크](https://forms.gle/Ef8bU4GN4dZ39fqaA)
+
+---
+
+## Project 2 - Python, Pico 2w, pywebview, MQTT
+
+---
+
+- 프로젝트 목표
+  - Python 을 이용해서 대시보드를 만들고 MQTT를 이용하여 데이터를 송수신하는 방법을 익힌다.
+  - Pico 2w를 이용한 IoT 프로젝트를 수행한다.
+  - [프로젝트 제한사항](doc/2nd_project.md)
+- 프로젝트 깃링크
+  - [1조](https://github.com/tkdtn412/fitness-pico)
+  - [2조](https://github.com/Gwiin/hrd_first_project)
+  - [3조](https://github.com/Segangs/PicoTeam2)

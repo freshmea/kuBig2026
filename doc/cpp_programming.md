@@ -246,4 +246,3 @@ MyClass obj;
 MyClass& objRef = obj; // obj의 참조자
 objRef.멤버함수(); // 참조자를 통해 멤버 함수 호출
 ```
-
