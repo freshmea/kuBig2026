@@ -25,6 +25,7 @@ add_subdirectory(ds/queue/myQueue2)
 add_subdirectory(ds/queue/myQueue3)
 add_subdirectory(network)
 add_subdirectory(bowling)
+add_subdirectory(opencv_ex)
 
 if(KUBIG_BUILD_ATMEGA128)
 	find_program(AVR_GCC_EXECUTABLE avr-gcc)
