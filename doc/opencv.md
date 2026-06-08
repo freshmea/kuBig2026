@@ -11,6 +11,10 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! \
   image/jpeg,width=640,height=480,framerate=30/1 ! \
   jpegdec ! videoconvert ! autovideosink sync=false
 
+gst-launch-1.0 v4l2src device=/dev/video0 ! \
+  video/x-h264,width=1280,height=720,framerate=30/1 ! \
+  h264parse ! avdec_h264 ! videoconvert ! autovideosink sync=false
+
 ```
 
 - 1교시: openCV 소개, 설치 방법 설명
