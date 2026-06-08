@@ -8,3 +8,6 @@ find_package(OpenCV REQUIRED)
 
 add_executable(01_helloWorld part1/01_helloWorld.cpp)
 target_link_libraries(01_helloWorld PRIVATE ${OpenCV_LIBS})
+
+add_executable(02_basicOp part1/02_basicOp.cpp)
+target_link_libraries(02_basicOp PRIVATE ${OpenCV_LIBS})
