@@ -11,3 +11,6 @@ target_link_libraries(01_helloWorld PRIVATE ${OpenCV_LIBS})
 
 add_executable(02_basicOp part1/02_basicOp.cpp)
 target_link_libraries(02_basicOp PRIVATE ${OpenCV_LIBS})
+
+add_executable(03_matOp part1/03_matOp.cpp)
+target_link_libraries(03_matOp PRIVATE ${OpenCV_LIBS})

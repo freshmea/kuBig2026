@@ -1,6 +1,7 @@
 #include "colors.hpp"
 #include <iostream>
 #include <opencv2/opencv.hpp>
+#include <vector>
 
 using namespace std;
 using namespace cv;
@@ -20,8 +21,14 @@ int main()
 
     // 동적 할당
     float *data2 = new float[10];
-    for (int i = 0; i < 10;i++){
-        data[i] = static_cast<float>(i + 1);
+    // for (int i = 0; i < 10;i++){
+    //     data[i] = static_cast<float>(i + 1);
+    // }
+    vector<float> data3(10);
+    int i = 0;
+    for (auto x : data3)
+    {
+        data2[i++] = 100;
     }
     Mat mat6(2, 5, CV_32FC1, data2);
 
