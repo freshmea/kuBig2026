@@ -126,3 +126,11 @@
   - [1조](https://github.com/tkdtn412/fitness-pico)
   - [2조](https://github.com/Gwiin/hrd_first_project)
   - [3조](https://github.com/Segangs/PicoTeam2)
+
+---
+
+## OpenCV
+
+---
+
+- [opencv 교재](https://carpal-polonium-c12.notion.site/1-C-OpenCV-375541956f7a81fab32fd726e323eb7b)
