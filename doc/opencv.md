@@ -9,9 +9,9 @@
 - 1교시: openCV 소개, 설치 방법 설명
 - 2교시: 라이브러리 설명
 - 3교시: 기본 클래스 (Point_, Size_, Rect_ ) 설명
-- 4교시: 기본 클래스
-- 5교시:
-- 6교시:
+- 4교시: 모던 cpp 기법 소개(범위 기반 for문, auto 키워드) 및 예제 설명
+- 5교시: inputarray, outputarray 설명
+- 6교시: assign 얕은 복사, clone, copyTo 깊은 복사 설명
 - 7교시:
 - 8교시:
 - 과제 :
