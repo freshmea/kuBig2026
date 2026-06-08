@@ -20,15 +20,16 @@ int main()
     Mat mat5(2, 5, CV_32FC1, data);
 
     // 동적 할당
-    float *data2 = new float[10];
+    // float *data2 = new float[10];
+    vector<float> *data2 = new vector<float>(10);
     // for (int i = 0; i < 10;i++){
     //     data[i] = static_cast<float>(i + 1);
     // }
-    vector<float> data3(10);
-    int i = 0;
-    for (auto x : data3)
+    // vector<float> data3(10);
+    // int i = 0;
+    for (auto x : *data2)
     {
-        data2[i++] = 100;
+        x = 100.0;
     }
     Mat mat6(2, 5, CV_32FC1, data2);
 
