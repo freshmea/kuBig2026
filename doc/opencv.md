@@ -6,6 +6,13 @@
 
 ---
 
+```bash
+gst-launch-1.0 v4l2src device=/dev/video0 ! \
+  image/jpeg,width=640,height=480,framerate=30/1 ! \
+  jpegdec ! videoconvert ! autovideosink sync=false
+
+```
+
 - 1교시: openCV 소개, 설치 방법 설명
 - 2교시: 라이브러리 설명
 - 3교시: 기본 클래스 (Point_, Size_, Rect_ ) 설명

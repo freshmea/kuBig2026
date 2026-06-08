@@ -23,6 +23,7 @@ int main()
         for (int j = 0; j < 10;++j)
         {
             Vec3b &pixel = img5.at<Vec3b>(i, j);
+            cout << pixel[0] << pixel[1] << pixel[2] << endl;
             pixel[0] = 0;
             pixel[1] = 0;
             pixel[2] = 0;
