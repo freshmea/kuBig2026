@@ -4,7 +4,8 @@
 using namespace std;
 using namespace cv;
 
-String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
+cv::String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
+// std::string folerPath;
 
 int main()
 {
