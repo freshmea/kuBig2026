@@ -1,4 +1,4 @@
-#include </home/aa/kuBig2025/opencv/part2/color.hpp>
+#include "colors.hpp"
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
@@ -9,17 +9,17 @@ String folderPath = "/home/aa/kuBig2025/opencv/data/";
 
 int main()
 {
-    Mat img(400, 600, CV_8UC3, white);
+    Mat img(400, 600, CV_8UC3, Color::White);
 
     int a = 0, b = 0, c = 0;
 
     while (true)
     {
-        img.setTo(white); // 배경 그리기
-        putText(img, "This is kuBig2026 test TEXT.", Point(20 + a, 50), FONT_HERSHEY_SIMPLEX, 2, red);
-        putText(img, "This is kuBig2026 test TEXT.", Point(20 + a, 100), FONT_ITALIC, 2, red);
-        putText(img, "This is kuBig2026 test TEXT.", Point(20 + a, 150), FONT_HERSHEY_DUPLEX, 3, blue);
-        putText(img, "This is kuBig2026 test TEXT.", Point(20 + a, 200), FONT_HERSHEY_PLAIN, 4, black);
+        img.setTo(Color::White); // 배경 그리기
+        putText(img, "This is kuBig2026 test TEXT.", Point(20 + a, 50), FONT_HERSHEY_SIMPLEX, 2, Color::Red);
+        putText(img, "This is kuBig2026 test TEXT.", Point(20 + a, 100), FONT_ITALIC, 2, Color::Red);
+        putText(img, "This is kuBig2026 test TEXT.", Point(20 + a, 150), FONT_HERSHEY_DUPLEX, 3, Color::Blue);
+        putText(img, "This is kuBig2026 test TEXT.", Point(20 + a, 200), FONT_HERSHEY_PLAIN, 4, Color::Black);
 
         imshow("img", img);
         if (waitKey(33) == 27)
