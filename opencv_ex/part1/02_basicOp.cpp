@@ -4,11 +4,11 @@
 using namespace std;
 using namespace cv;
 
-cv::String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
-// std::string folerPath;
 
 int main()
 {
+    const cv::String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
+    // std::string folerPath;
     Point_<int> p1(1, 3);
     Point_<float> p2(3.14, 4.31);
     Point_<int> p3(5, 8);

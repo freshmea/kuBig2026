@@ -6,10 +6,10 @@
 using namespace std;
 using namespace cv;
 
-String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
 
 int main()
 {
+    const String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
     VideoCapture cap(0, CAP_V4L2);
 
     if (!cap.isOpened())

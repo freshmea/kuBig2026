@@ -5,10 +5,10 @@
 using namespace std;
 using namespace cv;
 
-String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
 
 int main()
 {
+    const String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
     cout << "hello, world" << endl;
     // Mat img = imread(folderPath + "20260604_113829.jpg");
     // Mat img = Mat::zeros(480, 640, CV_8UC3);

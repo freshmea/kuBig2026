@@ -5,10 +5,10 @@
 using namespace std;
 using namespace cv;
 
-String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
 
 int main()
 {
+    const String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
     Mat img1 = imread(folderPath + "dog.bmp");
 
     Mat img2 = img1;

@@ -5,12 +5,12 @@
 using namespace std;
 using namespace cv;
 
-String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
 
 void printMat(InputArray _mat, OutputArray _output);
 
 int main()
 {
+    const String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
     Mat img = Mat(10, 20, CV_8UC1, Scalar(125));
 
     Mat mat2;

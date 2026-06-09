@@ -5,10 +5,10 @@
 using namespace std;
 using namespace cv;
 
-String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
 
 int main()
 {
+    const String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
     Mat img(400, 600, CV_8UC3, Color::White);
     // 400 높이, 600 넓이 배열의 논리 [y][x] {{x1...} {x2...}}
 

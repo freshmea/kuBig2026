@@ -5,12 +5,12 @@
 using namespace std;
 using namespace cv;
 
-String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
 
 void on_mouse(int event, int x, int y , int flags, void *data);
 
 int main()
 {
+    const String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
     Mat img = imread(folderPath + "lenna.bmp");
     namedWindow("img");
     setMouseCallback("img", on_mouse, (void *)&img);

@@ -38,8 +38,8 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! \
 - 2교시: 비디오 저장 코드
 - 3교시: 도형 그리기 (line, rectangle, circle, ellipse) 설명 및 AI 실습
 - 4교시: putText, freetype2 설명 및 실습
-- 5교시:
-- 6교시:
+- 5교시: keyboard event, TickMeter, getTickCount 설명 및 실습
+- 6교시: mouse event 설명 및 실습, example 실습
 - 7교시:
 - 8교시:
 - 과제 : 없음
