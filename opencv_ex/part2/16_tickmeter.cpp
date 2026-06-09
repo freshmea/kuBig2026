@@ -16,11 +16,11 @@ int main()
     int keycode;
     TickMeter tm1;
     TickMeter tm2;
-    int fps = 20;
+    int fps = 70;
     int needed_tick_ms;
+    tm1.start();
     while (true)
     {
-        tm1.start();
         tm2.start();
         // 필요한 코드 ( 오래걸리는)
         imshow("img", img);
@@ -29,6 +29,7 @@ int main()
         cout << elapsed_ms << endl;
         needed_tick_ms = cvRound(1000.0 / fps - elapsed_ms);
         cout << needed_tick_ms << endl;
+
         keycode = waitKey(needed_tick_ms);
         if (keycode == 27)
             break;
