@@ -12,7 +12,6 @@ void on_mouse(int event, int x, int y , int flags, void *data);
 int main()
 {
     Mat img = imread(folderPath + "lenna.bmp");
-
     namedWindow("img");
     setMouseCallback("img", on_mouse, (void *)&img);
 
@@ -28,5 +27,26 @@ int main()
 
 void on_mouse(int event, int x, int y, int flags, void *data)
 {
-    cout << " mouse event 발생!! " << endl;
+    Mat *img = (Mat *)data;
+    static int number;
+    cout << " mouse event 발생!! " << number++ << endl;
+    static Point ptOld;
+    static bool pushed;
+    switch (event)
+    {
+        case EVENT_LBUTTONDOWN:
+            ptOld = Point(x,y);
+            pushed = true;
+            break;
+        case EVENT_LBUTTONUP:
+            pushed = false;
+            break;
+        case EVENT_MOUSEMOVE:
+            if (pushed)
+            {
+                line(*img, ptOld, Point(x, y), Color::Red, 2);
+                ptOld = Point(x, y);
+            }
+            break;
+    }
 }
