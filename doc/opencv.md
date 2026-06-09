@@ -40,10 +40,10 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! \
 - 4교시: putText, freetype2 설명 및 실습
 - 5교시: keyboard event, TickMeter, getTickCount 설명 및 실습
 - 6교시: mouse event 설명 및 실습, example 실습
-- 7교시:
-- 8교시:
+- 7교시: trackbar 설명 및 실습, file storage 설명 및 실습
+- 8교시: 마스크 활용 설명 및 실습, example 실습
 - 과제 : 없음
-- 성과 기준 :
+- 성과 기준 : OpenCV의 도형 그리기 함수와 텍스트 출력 함수를 사용할 수 있어야 한다. OpenCV의 이벤트 처리 함수를 사용할 수 있어야 한다. OpenCV의 트랙바와 파일 저장 기능을 사용할 수 있어야 한다.
 
 ---
 
