@@ -24,7 +24,7 @@ int main()
         circle(img2, Point(350, 150), 20, Color::Yellow, 2, LINE_AA);
         ellipse(img2, Point(500, 50), Size(60, 30), 20, 0, 0 + c, Color::Cyan, FILLED, LINE_AA);
         imshow("img", img2);
-        if(waitKey(1000/30) == 27)
+        if(waitKey(1000/30) == 27) //esc
             break;
         a += 1;
         b += 2;
