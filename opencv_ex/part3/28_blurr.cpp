@@ -22,6 +22,9 @@ int main()
     cap.set(CAP_PROP_FRAME_WIDTH, 640);
     cap.set(CAP_PROP_FRAME_HEIGHT, 480);
     cap.set(CAP_PROP_FPS, 30);
+    int pos = 1;
+    namedWindow("frame");
+    createTrackbar("blur", "frame", &pos, 10);
 
     Mat frame;
     for (int i = 0; i < 1000; ++i)
@@ -29,8 +32,8 @@ int main()
         cap >> frame;
         if (waitKey(30) == 27)
             break;
-        blur_ex(frame);
-        blur(frame, frame, Size(21,21));
+        // blur_ex(frame);
+        blur(frame, frame, Size(pos*2+1,pos*2+1));
         imshow("frame", frame);
     }
     cap.release();
