@@ -55,8 +55,8 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! \
 - 2교시: constrast 조절, 곱하기, stretch, equalizeHist 설명 및 실습
 - 3교시: 연산 함수(add, subtract, addWeighted, absdiff), bitwise 연산 설명 및 실습
 - 4교시: 회선(convolution) 설명, filter2d, emboss 필터 실습
-- 5교시:
-- 6교시:
+- 5교시: blur 설명
+- 6교시: GaussianBlur, medianBlur 설명 및 실습
 - 7교시:
 - 8교시:
 - 과제 : 없음
