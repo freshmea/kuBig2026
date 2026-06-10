@@ -51,8 +51,8 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! \
 
 ---
 
-- 1교시:
-- 2교시:
+- 1교시: 복습, 밝기 조절, saturate_cast 설명 및 실습
+- 2교시: constrast 조절, 곱하기, stretch, equalizeHist 설명 및 실습
 - 3교시:
 - 4교시:
 - 5교시:
