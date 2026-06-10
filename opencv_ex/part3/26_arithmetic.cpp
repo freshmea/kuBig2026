@@ -11,12 +11,16 @@ int main()
     const String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
     Mat img = imread(folderPath + "lenna256.bmp", IMREAD_GRAYSCALE);
     Mat img2 = imread(folderPath + "square.bmp", IMREAD_GRAYSCALE);
-    Mat dst1, dst2, dst3, dst4;
+    Mat dst1, dst2, dst3, dst4, dst5, dst6, dst7, dst8;
 
     bitwise_and(img, img2, dst1);
     bitwise_or(img, img2, dst2);
     bitwise_xor(img, img2, dst3);
     bitwise_not(img, dst4);
+    add(img, img2, dst5);
+    addWeighted(img, 0.9, img2, 0.1, 0, dst6);
+    subtract(img, img2, dst7);
+    absdiff(img, img2, dst8);
 
     vector<pair<string, Mat>> images = {
         {"lenna", img},
@@ -25,6 +29,10 @@ int main()
         {"or", dst2},
         {"xor", dst3},
         {"not", dst4},
+        {"add", dst5},
+        {"addWeight", dst6},
+        {"subtract", dst7},
+        {"absdiff", dst8},
     };
 
     for (auto [name, image] : images){
