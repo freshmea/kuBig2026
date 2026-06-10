@@ -16,11 +16,14 @@ int main()
     Mat img3 = img + (img -128) * 1.f;
     minMaxLoc(img, &min, &max);
     Mat img4 = (img - min) * 255 / (max - min);
+    Mat img5;
+    equalizeHist(img, img5);
 
     imshow("lenna", img);
     imshow("multiple", img2);
     imshow("center contrast", img3);
     imshow("stretching", img4);
+    imshow("equalize", img5);
     waitKey();
 
     return 0;
