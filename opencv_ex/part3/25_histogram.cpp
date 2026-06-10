@@ -56,6 +56,12 @@ int main()
     imshow("center contrast", img3);
     imshow("stretching", img4);
     imshow("equalize", img5);
+
+    imshow("lenna-histo", getGrayHistImage(calcGrayHist(img)));
+    imshow("multiple-histo", getGrayHistImage(calcGrayHist(img2)));
+    imshow("center contrast-histo", getGrayHistImage(calcGrayHist(img3)));
+    imshow("stretching-histo", getGrayHistImage(calcGrayHist(img4)));
+    imshow("equalize-histo", getGrayHistImage(calcGrayHist(img5)));
     waitKey();
 
     return 0;
