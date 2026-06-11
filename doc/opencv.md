@@ -57,10 +57,10 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! \
 - 4교시: 회선(convolution) 설명, filter2d, emboss 필터 실습
 - 5교시: blur 설명
 - 6교시: GaussianBlur, medianBlur 설명 및 실습
-- 7교시:
-- 8교시:
+- 7교시: sharpening, bilateralFilter 설명 및 실습
+- 8교시: affine, perspective 변환 설명 및 실습
 - 과제 : 없음
-- 성과 기준 :
+- 성과 기준 : OpenCV의 밝기와 명암 조절 함수를 사용할 수 있어야 한다. OpenCV의 연산 함수와 bitwise 연산 함수를 사용할 수 있어야 한다. OpenCV의 회선과 블러링 함수를 사용할 수 있어야 한다. OpenCV의 기하학적 변환 함수를 사용할 수 있어야 한다.
 
 ---
 
