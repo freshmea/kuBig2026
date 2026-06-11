@@ -1,3 +1,6 @@
+// 비행기가 직선으로 더 많이 움직여야 한다 아주 멀어져서 점처럼 보였다가 커지는 구간도 넣고 360도로 회전할 수 있는 구간도 넣어줘
+// 거리와 위치 방향에 대한 정보를 tvec rvec 을 분석해서 puttext 로 넣어줘 배경 화면은 두배 resize를 해서 화면을 더 넓혀줘
+
 #include "colors.hpp"
 #include <cmath>
 #include <iostream>
