@@ -10,14 +10,19 @@ int main()
     Mat img = imread(folderPath + "lenna.bmp");
     Point2f srcPts[4];
     Point2f dstPts[4];
-    srcPts[0] = Point2f(0, 0);
-    srcPts[1] = Point2f(1, 0);
-    srcPts[2] = Point2f(1, 1);
-    srcPts[3] = Point2f(0, 1);
-    dstPts[0] = Point2f(0, 0.1);
-    dstPts[1] = Point2f(0.8, 0.7);
-    dstPts[2] = Point2f(0.65, 0.85);
-    dstPts[3] = Point2f(0.2, 0.9);
+    srcPts[0] = Point2f(0.0, 0.0);
+    srcPts[1] = Point2f(1.0, 0.0);
+    srcPts[2] = Point2f(1.0, 1.0);
+    srcPts[3] = Point2f(0.0, 1.0);
+
+    dstPts[0] = Point2f(0.0, 0.0);
+    dstPts[1] = Point2f(1.01, 0.0);
+    dstPts[2] = Point2f(1.0, 1.0);
+    dstPts[3] = Point2f(0.0, 1.0);
+    // dstPts[0] = Point2f(0.0, 0.1);
+    // dstPts[1] = Point2f(0.8, 0.0);
+    // dstPts[2] = Point2f(0.65, 0.85);
+    // dstPts[3] = Point2f(0.2, 0.9);
 
     Mat M = getPerspectiveTransform(srcPts, dstPts);
 
