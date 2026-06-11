@@ -9,3 +9,4 @@
 // → 종이 contour를 homography로 변환
 // → contourArea로 비율 넓이 계산
 // 비정형의 노트의 넓이를 카메라로 계산하기
+// 관련된 정보는 모두 화면에 putText 로 출력
