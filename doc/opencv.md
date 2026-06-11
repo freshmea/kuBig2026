@@ -68,8 +68,8 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! \
 
 ---
 
-- 1교시:
-- 2교시:
+- 1교시: 복습, perspective 변환 예제 설명
+- 2교시: 엣지 검출, sobel, canny 설명 및 실습
 - 3교시:
 - 4교시:
 - 5교시:

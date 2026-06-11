@@ -10,15 +10,17 @@ int main()
     Mat img = imread(folderPath + "lenna.bmp");
     Point2f srcPts[4];
     Point2f dstPts[4];
-    srcPts[0] = Point2f(0.0, 0.0);
-    srcPts[1] = Point2f(1.0, 0.0);
-    srcPts[2] = Point2f(1.0, 1.0);
-    srcPts[3] = Point2f(0.0, 1.0);
+    int w = img.cols;
+    int h = img.rows;
+    srcPts[0] = Point2f(0, 0);
+    srcPts[1] = Point2f(w - 1, 0);
+    srcPts[2] = Point2f(w - 1, h - 1);
+    srcPts[3] = Point2f(0, h - 1);
 
-    dstPts[0] = Point2f(0.0, 0.0);
-    dstPts[1] = Point2f(1.01, 0.0);
-    dstPts[2] = Point2f(1.0, 1.0);
-    dstPts[3] = Point2f(0.0, 1.0);
+    dstPts[0] = Point2f(0, 0);
+    dstPts[1] = Point2f((w - 1) * 0.8f, 0);
+    dstPts[2] = Point2f(w - 1, h - 1);
+    dstPts[3] = Point2f(0, h - 1);
     // dstPts[0] = Point2f(0.0, 0.1);
     // dstPts[1] = Point2f(0.8, 0.0);
     // dstPts[2] = Point2f(0.65, 0.85);
