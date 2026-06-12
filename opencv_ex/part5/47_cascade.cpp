@@ -37,7 +37,7 @@ void detect_face()
     vector<Rect> faces;
     classifier.detectMultiScale(src, faces);
 
-    for (Rect rc : faces)
+     for (Rect rc : faces)
     {
         rectangle(src, rc, Scalar(255, 0, 255), 2);
     }
