@@ -53,7 +53,7 @@ int main()
             pts1.push_back(keypoints1[good_matches[i].queryIdx].pt);
             pts2.push_back(keypoints2[good_matches[i].trainIdx].pt);
         }
-        M = findHomography(pts1, pts2, RANSAC);
+        M = findHomography(pts1, pts2, RANSAC); // getperspectiveTransform -> M 점 4+4
         perspectiveTransform(corners1, corners2, M);
         for (auto &p : corners2)
             corners2_int.push_back(Point(cvRound(p.x), cvRound(p.y)));
