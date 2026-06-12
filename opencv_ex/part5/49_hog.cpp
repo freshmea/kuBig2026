@@ -7,7 +7,6 @@ const String folderPath = "/home/aa/kuBig2026/opencv_ex/data/";
 int main()
 {
     VideoCapture cap(folderPath + "vtest.avi");
-    int fps = cap.get(CAP_PROP_FPS);
     if (!cap.isOpened())
     {
         cerr << "Video open failed!" << endl;
@@ -35,7 +34,7 @@ int main()
 
         imshow("frame", frame);
 
-        if (waitKey(fps) == 27)
+        if (waitKey(10) == 27)
             break;
     }
 
