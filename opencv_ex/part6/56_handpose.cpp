@@ -1,3 +1,5 @@
+// wget https://huggingface.co/camenduru/openpose/resolve/5e17f6ad43ab415a0114537541a8d37d2503424f/models/hand/pose_iter_102000.caffemodel
+
 #include <iostream>
 #include <opencv2/dnn.hpp>
 #include <opencv2/highgui.hpp>
