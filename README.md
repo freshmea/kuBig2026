@@ -140,3 +140,4 @@
   - [database](https://forms.gle/XAxoJ2yxPfTSaoTH8)
   - [라즈베리파이](https://forms.gle/9kMWTJf7vtAD52Eg6)
   - [TCP-IP](https://forms.gle/UANoNFS3rggvfWVT8)
+  - [OpenCV](https://forms.gle/xoMWY8vV7UYQ971s8)
