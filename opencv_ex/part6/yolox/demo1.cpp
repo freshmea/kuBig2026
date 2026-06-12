@@ -11,6 +11,9 @@ using namespace std;
 using namespace cv;
 using namespace dnn;
 
+vector<pair<int, int>> backendTargetPairs = {
+    make_pair(DNN_BACKEND_OPENCV, DNN_TARGET_CPU)};
+
 vector<string> labelYolox = {
     "person", "bicycle", "car", "motorcycle", "airplane", "bus",
     "train", "truck", "boat", "traffic light", "fire hydrant",
@@ -49,8 +52,8 @@ public:
         float confThresh = 0.35f,
         float nmsThresh = 0.5f,
         float objThresh = 0.5f,
-        int bId = DNN_BACKEND_CUDA,
-        int tId = DNN_TARGET_CUDA)
+        int bId = DNN_BACKEND_OPENCV,
+        int tId = DNN_TARGET_CPU)
         : modelPath(modPath),
           confThreshold(confThresh),
           nmsThreshold(nmsThresh),
@@ -61,7 +64,6 @@ public:
         num_classes = static_cast<int>(labelYolox.size());
 
         net = readNet(modelPath);
-
         net.setPreferableBackend(backendId);
         net.setPreferableTarget(targetId);
 
@@ -365,8 +367,8 @@ int main()
         confThreshold,
         nmsThreshold,
         objThreshold,
-        DNN_BACKEND_CUDA,
-        DNN_TARGET_CUDA);
+        DNN_BACKEND_OPENCV,
+        DNN_TARGET_CPU);
 
     VideoCapture cap(0, CAP_V4L2);
 
@@ -381,7 +383,7 @@ int main()
     cap.set(CAP_PROP_FRAME_HEIGHT, 480);
     cap.set(CAP_PROP_FPS, 30);
 
-    namedWindow("YOLOX CUDA", WINDOW_AUTOSIZE);
+    namedWindow("YOLOX", WINDOW_AUTOSIZE);
 
     Mat frame;
 
@@ -408,7 +410,7 @@ int main()
 
         Mat result = visualize(predictions, frame, letterboxScale, tm.getFPS());
 
-        imshow("YOLOX CUDA", result);
+        imshow("YOLOX", result);
 
         if (waitKey(1) == 27)
             break;
