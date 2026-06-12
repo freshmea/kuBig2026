@@ -1,4 +1,4 @@
-#include </home/aa/kuBig2025/opencv/part2/color.hpp>
+#include "colors.hpp"
 #include <iostream>
 #include <opencv2/opencv.hpp>
 #include <vector>
@@ -32,7 +32,7 @@ int main()
         FAST(gray_img, keypoints, 60, true);
         for (auto &k : keypoints)
         {
-            circle(img, Point(cvRound(k.pt.x), cvRound(k.pt.y)), 5, red, 2);
+            circle(img, Point(cvRound(k.pt.x), cvRound(k.pt.y)), 5, Color::Red, 2);
         }
         imshow("img", img);
 
@@ -40,7 +40,7 @@ int main()
         goodFeaturesToTrack(gray_img, corners, 1000, 0.01, 10);
         for (auto &p : corners)
         {
-            circle(img1, Point(p.x, p.y), 5, red, 2);
+            circle(img1, Point(p.x, p.y), 5, Color::Red, 2);
         }
         imshow("img1", img1);
 
