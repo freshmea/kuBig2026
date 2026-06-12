@@ -6,6 +6,8 @@ using namespace cv;
 using namespace cv::dnn;
 using namespace std;
 
+const String folderPath = "/home/aa/kuBig2026/opencv_ex/part6/classify/";
+
 int main(int argc, char *argv[])
 {
 	// Load an image
@@ -13,9 +15,9 @@ int main(int argc, char *argv[])
 	Mat img;
 
 	if (argc < 2)
-		img = imread("../space_shuttle.jpg", IMREAD_COLOR);
+		img = imread(folderPath+ "space_shuttle.jpg", IMREAD_COLOR);
 	else
-		img = imread(argv[1], IMREAD_COLOR);
+		img = imread(folderPath + argv[1], IMREAD_COLOR);
 
 	if (img.empty())
 	{
@@ -25,7 +27,7 @@ int main(int argc, char *argv[])
 
 	// Load network
 
-	Net net = readNet("../bvlc_googlenet.caffemodel", "../deploy.prototxt");
+	Net net = readNet(folderPath+ "bvlc_googlenet.caffemodel", folderPath + "deploy.prototxt");
 
 	if (net.empty())
 	{
@@ -35,7 +37,7 @@ int main(int argc, char *argv[])
 
 	// Load class names
 
-	ifstream fp("../classification_classes_ILSVRC2012.txt");
+	ifstream fp(folderPath + "classification_classes_ILSVRC2012.txt");
 
 	if (!fp.is_open())
 	{
