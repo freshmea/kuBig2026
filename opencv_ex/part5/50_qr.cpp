@@ -15,7 +15,7 @@ int main(void)
 
 void decode_qrcode()
 {
-    VideoCapture cap(0);
+    VideoCapture cap(0, CAP_V4L2);
 
     cap.set(CAP_PROP_FOURCC, VideoWriter::fourcc('M', 'J', 'P', 'G'));
     cap.set(CAP_PROP_FRAME_WIDTH, 640);
