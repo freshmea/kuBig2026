@@ -85,10 +85,10 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! \
 
 ---
 
-- 1교시:
-- 2교시:
-- 3교시:
-- 4교시:
+- 1교시: 객체 인식(cascadeClassifier, hog, qr) 설명 및 실습
+- 2교시: corners(FAST, Harris, GFTT, )설명 및 실습
+- 3교시: (SIFT, orb, kaze, akaze), matching, homography 설명 및 실습
+- 4교시: 머신러닝(knn, knndigit)
 - 5교시:
 - 6교시:
 - 7교시:
