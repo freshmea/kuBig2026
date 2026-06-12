@@ -9,3 +9,4 @@ __pycache__/
 *.egg-info/
 
 target/
+opencv_ex/data/pose_iter_102000.caffemodel
