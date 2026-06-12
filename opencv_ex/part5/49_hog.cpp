@@ -34,7 +34,7 @@ int main()
 
         imshow("frame", frame);
 
-        if (waitKey(10) == 27)
+        if (waitKey(100) == 27)
             break;
     }
 
