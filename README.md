@@ -137,3 +137,5 @@
 - [수업 진행 사항](doc/opencv.md)
 - 시험
   - [cpp](https://forms.gle/ECgK5cyeQJ8BgpuLA)
+  - [database](https://forms.gle/XAxoJ2yxPfTSaoTH8)
+  -
