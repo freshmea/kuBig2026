@@ -135,3 +135,5 @@
 
 - [opencv 교재](https://carpal-polonium-c12.notion.site/1-C-OpenCV-375541956f7a81fab32fd726e323eb7b)
 - [수업 진행 사항](doc/opencv.md)
+- 시험
+  - [cpp](https://forms.gle/ECgK5cyeQJ8BgpuLA)

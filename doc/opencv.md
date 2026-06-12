@@ -85,13 +85,13 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! \
 
 ---
 
-- 1교시: 객체 인식(cascadeClassifier, hog, qr) 설명 및 실습
+- 1교시: 객체 인식(cascadeClassifier, hog, qr-zbar) 설명 및 실습
 - 2교시: corners(FAST, Harris, GFTT, )설명 및 실습
-- 3교시: (SIFT, orb, kaze, akaze), matching, homography 설명 및 실습
+- 3교시: Keypoints(SIFT, orb, kaze, akaze), matching, homography 설명 및 실습
 - 4교시: 머신러닝(knn, knndigit)
 - 5교시:
 - 6교시:
 - 7교시:
 - 8교시: 시험
 - 과제 : 없음
-- 성과 기준 :
+- 성과 기준 : OpenCV의 객체 인식, 코너 검출, 키포인트 매칭, 머신러닝 기능을 사용할 수 있어야 한다.
