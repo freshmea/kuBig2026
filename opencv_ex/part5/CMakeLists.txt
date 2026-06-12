@@ -17,5 +17,5 @@ foreach(SOURCE ${SOURCES})
         ${OpenCV_INCLUDE_DIRS}
         ${ZBAR_INCLUDE_DIRS}
     )
-    target_link_libraries(${EXE_NAME} ${OpenCV_LIBS} ${ZBAR_INCLUDE_DIRS})
+    target_link_libraries(${EXE_NAME} ${OpenCV_LIBS} ${ZBAR_LIBRARIES})
 endforeach()
